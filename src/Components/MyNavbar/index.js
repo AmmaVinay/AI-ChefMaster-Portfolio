@@ -12,18 +12,8 @@ export default function MyNavbar() {
         {({ open }) => (
           <>
             <div className="mx-auto p-2 max-w-7xl px-2 sm:px-6 lg:px-8">
-              <div className="relative flex h-16 items-center justify-between">
-                <div className="flex items-center">
-                  <div className="sm:hidden">
-                    <Disclosure.Button className="text-white font-extrabold p-2">
-                      {open ? (
-                        <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-                      ) : (
-                        <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-                      )}
-                    </Disclosure.Button>
-                  </div>
-
+              <div className="relative flex h-16 items-center">
+                <div className="flex items-center w-full justify-between">
                   <div className="lg:mr-24">
                     <img
                       className="h-10 rounded w-auto navbar-logo ml-5"
@@ -32,7 +22,7 @@ export default function MyNavbar() {
                     />
                   </div>
 
-                  <div className="hidden sm:ml-6 sm:block">
+                  <div className="hidden sm:block">
                     <div className="flex self-start space-x-4 ">
                       <a
                         href="/"
@@ -72,27 +62,14 @@ export default function MyNavbar() {
                       </a>
                     </div>
                   </div>
-                </div>
-                <div className="flex items-center ">
-                  <div className="relative ml-3">
-                    <div className="flex items-center space-x-3">
-                      <a
-                        href="/login"
-                        className={`nav-link ${
-                          window.location.pathname === "/login" ? "active" : ""
-                        } rounded-md px-3 py-2 text-sm font-medium `}
-                      >
-                        Login
-                      </a>
-                      <a
-                        href="/signup"
-                        className={`nav-link ${
-                          window.location.pathname === "/signup" ? "active" : ""
-                        } rounded-md px-3 py-2 text-sm font-medium`}
-                      >
-                        Signup
-                      </a>
-                    </div>
+                  <div className="sm:hidden">
+                    <Disclosure.Button className="text-white font-extrabold p-2">
+                      {open ? (
+                        <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                      ) : (
+                        <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                      )}
+                    </Disclosure.Button>
                   </div>
                 </div>
               </div>

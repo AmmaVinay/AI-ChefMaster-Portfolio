@@ -4,7 +4,7 @@ import "./index.css";
 const Company = () => {
   return (
     <div>
-      <h1>Company</h1>
+      <h1>Career</h1>
     </div>
   );
 };

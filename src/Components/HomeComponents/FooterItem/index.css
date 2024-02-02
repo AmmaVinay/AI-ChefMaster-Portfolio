@@ -1,18 +1,18 @@
-button {
+.footer-button {
   background-color: #028090;
     outline: none;
     overflow: hidden;
    }
   
-.button:hover {
+.footer-button:hover {
     transform: scale(1.05);
     border-color: #fff9;
   }
   
-  .button:hover::before {
+  .footer-button:hover::before {
     animation: shine 1.2s ease-out infinite;
   }
-  .button::before {
+  .footer-button::before {
     content: "";
     position: absolute;
     width: 100px;
@@ -91,13 +91,9 @@ button {
     text-shadow: 5px 5px 8px rgba(12, 0, 0, 0.8);
 }
 
-.footer-heading {
-    margin-bottom: 40px; 
-    text-align: center;
-
-}
-.list-items-styles li {
+ .list-items-styles li {
     margin-bottom: 5px; 
+    text-align: start;
 }
 
  .footer {

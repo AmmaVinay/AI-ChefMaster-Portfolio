@@ -11,7 +11,7 @@ function Madein() {
           </h1>
         </div>
         <div className="md:max-sm-auto">
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6">
             <div className="mb-4 md:mb-0 text-center">
               <p className="counter text-4xl md:text-7xl font-bold">100+</p>
               <p className="counter-name text-2xl md:text-5xl font-bold">
