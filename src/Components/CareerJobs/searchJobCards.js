@@ -8,7 +8,7 @@ const listOfJobs = () => [
     jobApply: "Apply Now",
     jobDescription:
       "We are looking for a talented Frontend Developer to join our dynamic team. As a Frontend Developer, you will be responsible for implementing visual elements that users see and interact with on our AI-driven cooking platform",
-    jobType: "Remote",
+    jobType: "Full Time",
     jobPath: "/Frontend-Developer-Engineer",
   },
   {
