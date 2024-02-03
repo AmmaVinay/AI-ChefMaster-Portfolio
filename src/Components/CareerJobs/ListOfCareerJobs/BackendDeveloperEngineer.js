@@ -8,24 +8,24 @@ import { BsShare } from "react-icons/bs";
 
 const jobData = [
   {
-    title: "Frontend Developer Engineer",
-    location: "Mumbai",
+    title: "Backend Developer Engineer",
+    location: "Remote",
     endDate: "01/02/2024",
     description:
-      "We are looking for a talented Frontend Developer to join our dynamic team. As a Frontend Developer, you will be responsible for implementing visual elements that users see and interact with on our AI-driven cooking platform",
+      "We are seeking a Backend Developer to be a key contributor to our platform's server-side development. As a Backend Developer, you will work closely with the frontend team to ensure seamless integration and optimal performance.",
     requirements: [
       "Bachelor's degree in Computer Science, Software Engineering, or a related field.",
     ],
     qualifications: [
-      "Proficiency in HTML, CSS, and JavaScript",
-      "Experience with responsive and mobile design",
-      "Strong understanding of user experience and design principles",
-      "Excellent problem-solving skills and attention to detail",
+      "Proficiency in Python and experience with Flask framework",
+      "Knowledge of database systems, particularly MongoDB",
+      "Experience in RESTful API design and implementation",
+      "Problem-solving and debugging skills",
     ],
 
-    skills: ["HTML", "CSS", "JavaScript"],
+    skills: ["Python", "Flask", "MongoDB"],
     experience:
-      "1-2 years of experience in frontend development, including hands-on experience with the mentioned technologies.",
+      "1-2 years of experience in backend development, with a focus on Python and Django.",
     applyPath: "/frontend-developer-application",
   },
 ];

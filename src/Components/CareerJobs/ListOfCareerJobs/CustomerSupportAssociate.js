@@ -9,7 +9,7 @@ import { BsShare } from "react-icons/bs";
 const jobData = [
   {
     title: "Customer Support Associate",
-    location: "Mumbai",
+    location: "Remote",
     endDate: "01/02/2024",
 
     description:

@@ -9,7 +9,7 @@ import { BsShare } from "react-icons/bs";
 const jobData = [
   {
     title: "AI Engineer",
-    location: "Mumbai",
+    location: "Remote",
     endDate: "01/02/2024",
     description:
       "We are looking for an AI Engineer to enhance and optimize our AI-driven cooking assistant. As an AI Engineer, you will work on developing and implementing machine learning algorithms to improve user interactions and recommendations.",

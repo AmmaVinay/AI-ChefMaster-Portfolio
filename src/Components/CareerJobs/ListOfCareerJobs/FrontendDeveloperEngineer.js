@@ -9,7 +9,7 @@ import { BsShare } from "react-icons/bs";
 const jobData = [
   {
     title: "Frontend Developer Engineer",
-    location: "Mumbai",
+    location: "Remote",
     endDate: "01/02/2024",
     description:
       "We are looking for a talented Frontend Developer to join our dynamic team. As a Frontend Developer, you will be responsible for implementing visual elements that users see and interact with on our AI-driven cooking platform",

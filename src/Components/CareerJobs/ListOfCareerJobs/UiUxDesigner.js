@@ -9,7 +9,7 @@ import { BsShare } from "react-icons/bs";
 const jobData = [
   {
     title: "UI/UX Designer",
-    location: "Mumbai",
+    location: "Remote",
     endDate: "01/02/2024",
     description:
       "We are looking for a creative UI/UX Designer to join our design team. As a UI/UX Designer, you will be responsible for creating visually appealing and user-friendly interfaces for our cooking platform.",

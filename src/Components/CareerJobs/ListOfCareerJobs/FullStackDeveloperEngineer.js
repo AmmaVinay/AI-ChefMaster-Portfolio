@@ -9,7 +9,7 @@ import { BsShare } from "react-icons/bs";
 const jobData = [
   {
     title: "Full Stack Developer Engineer",
-    location: "Mumbai",
+    location: "Remote",
     endDate: "01/02/2024",
     description:
       "We are seeking a Full Stack Developer to contribute to both frontend and backend development tasks. The Full Stack Developer will play a key role in ensuring the seamless integration of all platform components.",

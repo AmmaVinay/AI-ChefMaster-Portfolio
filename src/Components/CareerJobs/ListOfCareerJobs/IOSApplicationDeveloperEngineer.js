@@ -8,28 +8,27 @@ import { BsShare } from "react-icons/bs";
 
 const jobData = [
   {
-    title: "Android Application Developer Engineer",
-    location: "Mumbai",
-    applyPath: "Apply Now",
+    title: "iOS Application Developer Engineer",
+    location: "Remote",
+    endDate: "01/02/2024",
+    applyPath: "/iOS-application-developer-engineer",
     description:
-      "We are seeking an Android Application Developer to contribute to the development of our mobile application. The Android Developer will work closely with the frontend and backend teams to ensure a seamless mobile experience.",
-    applyPath: "/android-application-developer",
+      "We are looking for an iOS Application Developer to join our mobile development team. The iOS Developer will be responsible for creating and maintaining our iOS application.",
     requirements: [
       "Bachelor's degree in Computer Science, Software Engineering, or a related field.",
     ],
     qualifications: [
-      "Proficiency in Android app development using Java or Kotlin",
+      "Proficiency in iOS app development using Swift",
       "Experience with mobile UI/UX design principles",
-      "Familiarity with RESTful APIs and integration",
+      "Knowledge of iOS development best practices",
       "Strong problem-solving skills",
     ],
     skills: [
-      "Java or Kotlin",
-      "RESTful APIs",
+      "Swift",
       "Mobile UI/UX design principles",
       "Debugging and problem-solving skills",
     ],
-    experience: "1-2 years of experience in Android app development.",
+    experience: "1-2 years of experience in iOS app development.",
   },
 ];
 

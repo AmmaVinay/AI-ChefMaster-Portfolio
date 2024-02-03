@@ -4,16 +4,16 @@ import ReviewPage from "./ReviewPage";
 const listOfJobs = () => [
   {
     jobTitle: "Frontend Developer Engineer",
-    jobLocation: "Pune",
+    jobLocation: "Remote",
     jobApply: "Apply Now",
     jobDescription:
       "We are looking for a talented Frontend Developer to join our dynamic team. As a Frontend Developer, you will be responsible for implementing visual elements that users see and interact with on our AI-driven cooking platform",
-    jobType: "Intenship",
+    jobType: "Remote",
     jobPath: "/Frontend-Developer-Engineer",
   },
   {
     jobTitle: "Backend Developer Engineer",
-    jobLocation: "Hyderabad",
+    jobLocation: "Remote",
     jobApply: "Apply Now",
     jobDescription:
       "We are seeking a Backend Developer to be a key contributor to our platform's server-side development. As a Backend Developer, you will work closely with the frontend team to ensure seamless integration and optimal performance",
@@ -22,7 +22,7 @@ const listOfJobs = () => [
   },
   {
     jobTitle: "AI Engineer",
-    jobLocation: "Pune",
+    jobLocation: "Remote",
     jobApply: "Apply Now",
     jobDescription:
       "We are looking for an AI Engineer to enhance and optimize our AI-driven cooking assistant. As an AI Engineer, you will work on developing and implementing machine learning algorithms to improve user interactions and recommendations",
@@ -32,7 +32,7 @@ const listOfJobs = () => [
 
   {
     jobTitle: "Server Engineer",
-    jobLocation: "Hyderabad",
+    jobLocation: "Remote",
     jobApply: "Apply Now",
     jobDescription:
       "We are seeking a Server Engineer to manage and optimize the backend infrastructure of our platform. The Server Engineer will play a key role in ensuring the scalability and reliability of our system.",
@@ -41,7 +41,7 @@ const listOfJobs = () => [
   },
   {
     jobTitle: "UI/UX Designer",
-    jobLocation: "Chennai",
+    jobLocation: "Remote",
     jobApply: "Apply Now",
     jobDescription:
       "We are looking for a creative UI/UX Designer to join our design team. As a UI/UX Designer, you will be responsible for creating visually appealing and user-friendly interfaces for our cooking platform.",
@@ -50,47 +50,47 @@ const listOfJobs = () => [
   },
   {
     jobTitle: "Android Application Developer Engineer",
-    jobLocation: "Mumbai",
+    jobLocation: "Remote",
     jobApply: "Apply Now",
     jobDescription:
       "Build scalable and efficient server-side applications. Implement data storage solutions and integrate with external APIs. Troubleshoot, debug, and optimize application performance.",
-    jobType: "Internship",
+    jobType: "Full Time",
     jobPath: "/Android-Application-Developer-Engineer",
   },
   {
     jobTitle: "iOS Application Developer Engineer",
-    jobLocation: "Mumbai",
+    jobLocation: "Remote",
     jobApply: "Apply Now",
     jobDescription:
       "We are looking for an iOS Application Developer to join our mobile development team. The iOS Developer will be responsible for creating and maintaining our iOS application.",
-    jobType: "Internship",
+    jobType: "Full Time",
     jobPath: "/iOS-Application-Developer-Engineer",
   },
   {
     jobTitle: "Full Stack Developer Engineer",
-    jobLocation: "Mumbai",
+    jobLocation: "Remote",
     jobApply: "Apply Now",
     jobDescription:
       "We are seeking a Full Stack Developer to contribute to both frontend and backend development tasks. The Full Stack Developer will play a key role in ensuring the seamless integration of all platform components.",
-    jobType: "Internship",
+    jobType: "Full Time",
     jobPath: "/Full-Stack-Developer-Engineer",
   },
   {
     jobTitle: "Customer Support Associate",
-    jobLocation: "Mumbai",
+    jobLocation: "Remote",
     jobApply: "Apply Now",
     jobDescription:
       "We are looking for a Customer Support Associate to provide exceptional support to our users. The Customer Support Associate will assist users in navigating the platform, troubleshooting issues, and ensuring a positive user experience.",
-    jobType: "Internship",
+    jobType: "Full Time",
     jobPath: "/Customer-Support-Associate",
   },
   {
     jobTitle: "Research and Development Engineer",
-    jobLocation: "Mumbai",
+    jobLocation: "Remote",
     jobApply: "Apply Now",
     jobDescription:
       "We are seeking a Research and Development Engineer to contribute to the innovation and improvement of our platform. The R&D Engineer will explore new technologies and methodologies to enhance the overall user experience.",
-    jobType: "Internship",
+    jobType: "Full Time",
     jobPath: "/Research-and-Development-Engineer",
   },
 ];

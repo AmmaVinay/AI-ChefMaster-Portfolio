@@ -9,7 +9,7 @@ import { BsShare } from "react-icons/bs";
 const jobData = [
   {
     title: "Research and Development Engineer",
-    location: "Mumbai",
+    location: "Remote",
     description:
       "We are seeking a Research and Development Engineer to contribute to the innovation and improvement of our platform. The R&D Engineer will explore new technologies and methodologies to enhance the overall user experience.",
     applyPath: "/research-and-developer-engineer",

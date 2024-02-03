@@ -9,10 +9,10 @@ import { BsShare } from "react-icons/bs";
 const jobData = [
   {
     title: "Server Engineer",
-    location: "Mumbai",
-    endDate: "End Date",
+    location: "Remote",
+    endDate: "01/02/2024",
     description:
-      "We are seeking a Server Engineer to manage and optimize the backend infrastructure of our platform. The Server Engineer will play a key role in ensuring the scalability and reliability of our system.",
+      "We ares seeking a Server Engineer to manage and optimize the backend infrastructure of our platform. The Server Engineer will play a key role in ensuring the scalability and reliability of our system.",
     requirements: [
       "Bachelor's degree in Computer Science, Software Engineering, or a related field.",
     ],

@@ -9,7 +9,7 @@ import { BsShare } from "react-icons/bs";
 const jobData = [
   {
     title: "Android Application Developer Engineer",
-    location: "Mumbai",
+    location: "Remote",
     endDate: "01/02/2024",
     description:
       "We are seeking an Android Application Developer to contribute to the development of our mobile application. The Android Developer will work closely with the frontend and backend teams to ensure a seamless mobile experience.",
