@@ -23,6 +23,40 @@ import IOSApplicationDeveloperEngineer from "./Components/CareerJobs/ListOfCaree
 import FullStackDeveloperEngineer from "./Components/CareerJobs/ListOfCareerJobs/FullStackDeveloperEngineer";
 import CustomerSupportAssociate from "./Components/CareerJobs/ListOfCareerJobs/CustomerSupportAssociate";
 import ResearchDevelopmentEngineer from "./Components/CareerJobs/ListOfCareerJobs/ResearchDevelopmentEngineer";
+import Application from "./Components/CareerJobs/JobApplicationForm/Application";
+import MyExperience from "./Components/CareerJobs/JobApplicationForm/MyExperience";
+import VoluntaryDisclosures from "./Components/CareerJobs/JobApplicationForm/VoluntaryDisclosures";
+import ApplicationQuestions from "./Components/CareerJobs/JobApplicationForm/ApplicationQuestions";
+import Review from "./Components/CareerJobs/JobApplicationForm/Review";
+const jobData = [
+  {
+    title: "Fronend Developer",
+  },
+  {
+    title: "Backend Developer Engineer",
+  },
+  {
+    title: "AI Engineer",
+  },
+  {
+    title: "Android Application Developer Engineer",
+  },
+  {
+    title: "Customer Support Associate",
+  },
+  {
+    title: "iOS Application Developer Engineer",
+  },
+  {
+    title: "Research and Development Engineer",
+  },
+  {
+    title: "Server Engineer",
+  },
+  {
+    title: "UI/UX Designer",
+  },
+];
 
 const App = () => {
   return (
@@ -73,6 +107,14 @@ const App = () => {
           path="/Research-And-Development-Engineer"
           element={<ResearchDevelopmentEngineer />}
         />
+        <Route
+          path="/application"
+          element={<Application jobData={jobData[0]} />}
+        />
+        <Route path="/experience" element={<MyExperience />} />
+        <Route path="/voluntary" element={<VoluntaryDisclosures />} />
+        <Route path="/questions" element={<ApplicationQuestions />} />
+        <Route path="/review" element={<Review />} />
 
         <Route path="/notfound" element={<NotFound />} />
       </Routes>

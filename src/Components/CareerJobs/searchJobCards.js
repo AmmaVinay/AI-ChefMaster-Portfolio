@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import ReviewPage from "./ReviewPage";
+
 const listOfJobs = () => [
   {
     jobTitle: "Frontend Developer Engineer",
@@ -10,6 +10,7 @@ const listOfJobs = () => [
       "We are looking for a talented Frontend Developer to join our dynamic team. As a Frontend Developer, you will be responsible for implementing visual elements that users see and interact with on our AI-driven cooking platform",
     jobType: "Intenship",
     jobPath: "/Frontend-Developer-Engineer",
+    isOpen: true,
   },
   {
     jobTitle: "Backend Developer Engineer",
@@ -19,6 +20,7 @@ const listOfJobs = () => [
       "We are seeking a Backend Developer to be a key contributor to our platform's server-side development. As a Backend Developer, you will work closely with the frontend team to ensure seamless integration and optimal performance",
     jobType: "Full Time",
     jobPath: "/Backend-Developer-Engineer",
+    isOpen: false,
   },
   {
     jobTitle: "AI Engineer",
@@ -28,6 +30,7 @@ const listOfJobs = () => [
       "We are looking for an AI Engineer to enhance and optimize our AI-driven cooking assistant. As an AI Engineer, you will work on developing and implementing machine learning algorithms to improve user interactions and recommendations",
     jobType: "Full Time",
     jobPath: "/AI-Engineer",
+    isOpen: true,
   },
 
   {
@@ -38,6 +41,7 @@ const listOfJobs = () => [
       "We are seeking a Server Engineer to manage and optimize the backend infrastructure of our platform. The Server Engineer will play a key role in ensuring the scalability and reliability of our system.",
     jobType: "Full Time",
     jobPath: "/Server-Engineer",
+    isOpen: true,
   },
   {
     jobTitle: "UI/UX Designer",
@@ -47,6 +51,7 @@ const listOfJobs = () => [
       "We are looking for a creative UI/UX Designer to join our design team. As a UI/UX Designer, you will be responsible for creating visually appealing and user-friendly interfaces for our cooking platform.",
     jobType: "Full Time",
     jobPath: "/ui-ux-designer",
+    isOpen: true,
   },
   {
     jobTitle: "Android Application Developer Engineer",
@@ -56,6 +61,7 @@ const listOfJobs = () => [
       "Build scalable and efficient server-side applications. Implement data storage solutions and integrate with external APIs. Troubleshoot, debug, and optimize application performance.",
     jobType: "Full Time",
     jobPath: "/Android-Application-Developer-Engineer",
+    isOpen: true,
   },
   {
     jobTitle: "iOS Application Developer Engineer",
@@ -65,6 +71,7 @@ const listOfJobs = () => [
       "We are looking for an iOS Application Developer to join our mobile development team. The iOS Developer will be responsible for creating and maintaining our iOS application.",
     jobType: "Full Time",
     jobPath: "/iOS-Application-Developer-Engineer",
+    isOpen: true,
   },
   {
     jobTitle: "Full Stack Developer Engineer",
@@ -74,6 +81,7 @@ const listOfJobs = () => [
       "We are seeking a Full Stack Developer to contribute to both frontend and backend development tasks. The Full Stack Developer will play a key role in ensuring the seamless integration of all platform components.",
     jobType: "Full Time",
     jobPath: "/Full-Stack-Developer-Engineer",
+    isOpen: true,
   },
   {
     jobTitle: "Customer Support Associate",
@@ -83,6 +91,7 @@ const listOfJobs = () => [
       "We are looking for a Customer Support Associate to provide exceptional support to our users. The Customer Support Associate will assist users in navigating the platform, troubleshooting issues, and ensuring a positive user experience.",
     jobType: "Full Time",
     jobPath: "/Customer-Support-Associate",
+    isOpen: true,
   },
   {
     jobTitle: "Research and Development Engineer",
@@ -92,13 +101,16 @@ const listOfJobs = () => [
       "We are seeking a Research and Development Engineer to contribute to the innovation and improvement of our platform. The R&D Engineer will explore new technologies and methodologies to enhance the overall user experience.",
     jobType: "Full Time",
     jobPath: "/Research-and-Development-Engineer",
+    isOpen: true,
   },
 ];
 
 function JobCard({ job }) {
+  const isJobOpen = job.isOpen; // Replace 'jobExists' with the actual property that indicates whether the job is open
+
   return (
     <div className="bg-white border border-green-300 p-4 rounded-lg shadow-lg max-w-sm mb-4">
-      <div className="flex justify-between mb-3 text-gray-500 items-center">
+      <div className="flex flex-col sm:flex-row justify-between mb-3 text-gray-500 items-center">
         <div className="flex items-center">
           <span className="mr-2 text-lg">🌐</span>
           <div>
@@ -118,15 +130,19 @@ function JobCard({ job }) {
       <p className="text-gray-700 overflow-hidden line-clamp-3">
         {job.jobDescription}
       </p>
-      <div className="flex justify-between items-center mt-3">
+      <div className="flex flex-col sm:flex-row justify-between items-center mt-3">
         <div>
           <strong className="text-green-800">Job Type:</strong> {job.jobType}
         </div>
-        <Link to={job.jobPath}>
-          <button className="bg-green-500 text-white py-1 px-3 rounded-md hover:bg-green-600 transition">
-            {job.jobApply}
-          </button>
-        </Link>
+        {isJobOpen ? (
+          <Link to={job.jobPath}>
+            <button className="bg-green-500 text-white py-1 px-3 rounded-md hover:bg-green-600 transition">
+              {job.jobApply}
+            </button>
+          </Link>
+        ) : (
+          <span className="text-red-500">Application Closed</span>
+        )}
       </div>
     </div>
   );
@@ -150,7 +166,7 @@ function SearchJobCards() {
         </h1>
 
         <div className=" flex justify-center ">
-          <div className="mb-8 w-full flex gap-4 items-center justify-center">
+          <div className="mb-8 w-full flex flex-wrap gap-4 items-center justify-center">
             <input
               type="search"
               placeholder="Search by Job Title"
@@ -175,7 +191,6 @@ function SearchJobCards() {
           ))}
         </div>
       </div>
-      <ReviewPage />
     </>
   );
 }

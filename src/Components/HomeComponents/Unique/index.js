@@ -8,7 +8,7 @@ import "tailwindcss/tailwind.css"; // Import Tailwind CSS first
 
 export default function Unique() {
   return (
-    <div className="background-main-page h-full ">
+    <div className="background-main-page h-full break-words ">
       <div className=" flex flex-col md:flex-row justify-evenly items-center px-6 md:px-10 py-8 md:py-20">
         <div className="lg:w-7/12 sm:w-full md:w-full mb-8 sm:mb-0 ">
           <h1

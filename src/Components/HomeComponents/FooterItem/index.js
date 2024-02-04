@@ -10,7 +10,7 @@ const FooterItem = () => {
     <div className="footer rounded-0 card bg-black shadow-lg mt-0 golden-text">
       <div className="text-center my-5">
         <h1 className="footer-heading mb-3">Ready to do your best work?</h1>
-        <h5 className="text-2xl font-bold mb4">Let's get you started.</h5>
+        <h5 className="text-2xl font-bold mb-4">Let's get you started.</h5>
         <div className="flex justify-center ">
           <Button className="footer-button p-3 hover:shadow-lg w-48 md:w-68 rounded font-sans text-white text-sm md:text-lg transform transition duration-500 hover:scale-110">
             <a href="/signup" className="no-underline text-white ">

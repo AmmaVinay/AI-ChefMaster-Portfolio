@@ -54,7 +54,9 @@ const CustomerSupportAssociate = () => {
           <div className="flex flex-col justify-around items-center">
             <div>
               <Button className="px-10  bg-blue-500 hover:bg-blue-700 transition ease-in-out transition-shadow">
-                <Link to={job.applyPath}>Apply</Link>
+                <Link to={`/application?job=${encodeURIComponent(job.title)}`}>
+                  Apply
+                </Link>
               </Button>
             </div>
             <div className="flex items-center">

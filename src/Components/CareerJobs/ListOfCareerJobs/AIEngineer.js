@@ -5,7 +5,6 @@ import { FaWhatsapp } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { BsShare } from "react-icons/bs";
-
 const jobData = [
   {
     title: "AI Engineer",
@@ -30,7 +29,7 @@ const jobData = [
     ],
     experience:
       "1-2 years of experience in AI or machine learning roles, with hands-on experience in developing and implementing machine learning algorithms.",
-    applyPath: "/ai-engineer-application",
+    applyPath: "/application",
   },
 ];
 
@@ -53,7 +52,9 @@ const AIEngineer = () => {
           <div className="flex flex-col justify-around items-center">
             <div>
               <Button className="px-10  bg-blue-500 hover:bg-blue-700 transition ease-in-out transition-shadow">
-                <Link to={job.applyPath}>Apply</Link>
+                <Link to={`/application?job=${encodeURIComponent(job.title)}`}>
+                  Apply
+                </Link>
               </Button>
             </div>
             <div className="flex items-center">

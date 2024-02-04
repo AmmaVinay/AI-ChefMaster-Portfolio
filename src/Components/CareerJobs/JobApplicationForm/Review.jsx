@@ -1,9 +1,11 @@
-import React from "react";
-import { Button } from "@material-tailwind/react";
-function ReviewPage() {
+import React from 'react'
+ 
+const Review = () => {
   return (
-    <div className="bg-gray-100  flex items-center justify-center p-4 break-words">
-      <div className="w-full max-w-6xl bg-white p-8 rounded-lg shadow-lg">
+    <>   
+    
+      <div className=" flex items-center justify-center p-4 break-words">
+      <div className="w-full max-w-6xl p-8 rounded-lg">
         <h1 className="text-3xl font-bold text-center mb-6">Review</h1>
 
         <div className="mb-8">
@@ -177,13 +179,10 @@ function ReviewPage() {
           </div>
         </div>
 
-        <div className="flex justify-around mt-18 flex-wrap gap-3">
-          <Button className="bg-blue-500 hover:bg-blue-700">Previous</Button>
-          <Button className="bg-blue-500 hover:bg-blue-700">Submit</Button>
-        </div>
       </div>
-    </div>
-  );
+      </div>
+   </>
+  )
 }
 
-export default ReviewPage;
+export default Review

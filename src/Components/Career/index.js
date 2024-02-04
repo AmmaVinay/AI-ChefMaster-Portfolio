@@ -1,5 +1,4 @@
 import React from "react";
-import "./index.css";
 import { MdNavigateNext } from "react-icons/md";
 
 const Career = () => {

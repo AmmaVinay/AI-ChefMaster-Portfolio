@@ -4,7 +4,7 @@ import "../Happiness/index.css";
 
 function Happiness() {
   return (
-    <div className="bg-white flex flex-col md:flex-row justify-center items-center px-6 md:px-10 py-8 md:py-20">
+    <div className="bg-white flex flex-col md:flex-row justify-center break-words items-center px-6 md:px-10 py-8 md:py-20">
       <div className="sm:text-left lg:w-7/12 sm:w-full md:w-full mb-8 sm:mb-0">
         <h1
           style={{ lineHeight: "3rem" }}
@@ -26,7 +26,7 @@ function Happiness() {
           personalized support further enhances the overall customer experience,
           fostering a positive relationship and solidifying trust in our brand.
         </p>
-        <Button className="bg-sky-700 hover:bg-sky-800 text-white rounded-md font-sans font-medium text-lg">
+        <Button className="bg-sky-700 hover:bg-sky-800 text-white rounded-md font-sans font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl">
           ▶️ Watch Co-workers Video
         </Button>
       </div>

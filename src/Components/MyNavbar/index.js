@@ -79,7 +79,7 @@ export default function MyNavbar() {
               <div className="space-y-1 px-2 pb-3 pt-2">
                 <a
                   href="/"
-                  className={`bg-gray-100 text-black block rounded-md px-3 py-2 text-base font-medium ${
+                  className={` text-black  hover:bg-gray-100 hover:text-white block rounded-md px-3 py-2 text-base font-medium ${
                     window.location.pathname === "/" ? "active" : ""
                   }`}
                 >

@@ -36,10 +36,10 @@ function Values() {
   ];
 
   return (
-    <div className="background-style-value text-black px-6 md:px-10 py-8 md:py-20 text-center ">
+    <div className="background-style-value break-words text-black px-6 md:px-10 py-8 md:py-20 text-center ">
       <h1
         style={{ lineHeight: "3rem" }}
-        className="main-heading font-semibold text-center text-2xl md:text-4xl mb-4 md:mb-8"
+        className="main-heading font-semibold text-center  text-2xl md:text-4xl mb-4 md:mb-8"
       >
         THE VALUES AND CORE PRINCIPLE AT ACM
       </h1>
