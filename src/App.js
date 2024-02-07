@@ -4,7 +4,7 @@ import MyNavbar from "./Components/MyNavbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./Components/Home";
 import Product from "./Components/Product";
-import CareerMainPage from "./Components/Career/CareerMainPage";
+import Technology from "./Components/Career/Technology";
 
 import Company from "./Components/Company";
 import SignUpForm from "./Components/SineUpForm";
@@ -29,6 +29,7 @@ import MyExperience from "./Components/Career/JobApplicationForm/MyExperience";
 import VoluntaryDisclosures from "./Components/Career/JobApplicationForm/VoluntaryDisclosures";
 import ApplicationQuestions from "./Components/Career/JobApplicationForm/ApplicationQuestions";
 import Review from "./Components/Career/JobApplicationForm/Review";
+import CareerHomePage from "./Components/Career/CareerHomePage";
 const jobData = [
   {
     title: "Fronend Developer",
@@ -66,12 +67,13 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product" element={<Product />} />
-        <Route path="/career" element={<CareerMainPage />} />
+        <Route path="/career" element={<CareerHomePage />} />
         <Route path="/company" element={<Company />} />
         <Route path="/login" element={<LoginForm />} />
         <Route path="/signup" element={<SignUpForm />} />
         <Route path="/aiassistant" element={<CardAIAssistant />} />
         <Route path="/aikitchen" element={<CardAIKitchen />} />
+        <Route path="/technology" element={<Technology />} />
         <Route
           path="/ainutritionmanager"
           element={<CardAINutritionManager />}

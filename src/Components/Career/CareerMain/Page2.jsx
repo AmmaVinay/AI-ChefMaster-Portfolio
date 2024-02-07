@@ -8,8 +8,8 @@ import Sale from './Sale.png'
 import Design from './Design.png'
 import Internships from './Internships.png'
 import img2 from './img2.png'
-import work from './work.jpg'
 import operations from './operations.png'
+import { Link } from 'react-router-dom';
 
 const Page2 = () => {
   return (
@@ -27,9 +27,9 @@ const Page2 = () => {
         Join our community and play a pivotal role in defining the very essence of who we are."
       </p>
       
-      <a className='text-indigo-800 text-center text-lg sm:text-xl md:text-3xl transform transition duration-500 hover:scale-110' href="#">
+      <Link className='text-indigo-800 text-center text-lg sm:text-xl md:text-3xl transform transition duration-500 hover:scale-110' href="#">
         Learn More about AI Chefmaster 🡪
-      </a>
+      </Link>
     </div>
 
 <div className="min-h-screen relative w-full overflow-hidden">
@@ -48,12 +48,10 @@ const Page2 = () => {
         Unlock your potential, be authentic, and thrive at AI Chef master"
 
         <br />
-        <a
-          className='text-blue-500 text-lg sm:text-xl transform transition duration-300 hover:scale-105 inline-block mt-4'
-          href="#"
-        >
+        <Link
+          className='text-blue-500 text-lg sm:text-xl transform transition duration-300 hover:scale-105 inline-block mt-4'>
           Learn More about Technology 🡪
-        </a>
+        </Link>
       </Typography>
     </div>
   </div>
@@ -68,7 +66,7 @@ const Page2 = () => {
       </p>
     <div className='gap-4 mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center bg-white '>
     <div className="w-80 h-80 bg-blue-400 hover:shadow-lg rounded-md hover:border-2 hover:shadow-slate-500 ">
-          <img className='h-64 mt-1' src={operations} />
+          <img className='h-64 mt-1' src={operations} alt='operations'/>
           
           <div className="flex gap-4 justify-center">
             <Button className='bg-white w-full h-16 text-indigo-700 text-2xl'> Operations 🡪</Button>
@@ -76,7 +74,7 @@ const Page2 = () => {
         </div>
 
     <div className="w-80 h-80 bg-blue-400 hover:shadow-lg rounded-md hover:border-2 hover:shadow-slate-500 ">
-          <img className='h-64 mt-1' src={RD}  />
+          <img className='h-64 mt-1' src={RD} alt='RB' />
           
           <div className="flex gap-4 justify-center">
             <Button className='bg-white w-full h-16 text-indigo-700 text-2xl'>R & D 🡪</Button>
@@ -84,14 +82,14 @@ const Page2 = () => {
         </div>
 
     <div className="w-80 h-80 bg-blue-400 hover:shadow-lg rounded-md hover:border-2 hover:shadow-slate-500 ">
-          <img className='h-64 mt-1' src={Technology}  />
+          <img className='h-64 mt-1' src={Technology}  alt="Technology"/>
           
           <div className="flex gap-4 justify-center">
-            <Button className='bg-white w-full h-16 text-indigo-700 text-2xl'>Technology 🡪</Button>
+            <Button className='bg-white w-full h-16 text-indigo-700 text-2xl'><Link to="/technology" onClick={() => window.scrollTo(0, 0)}>Technology 🡪</Link></Button>
           </div>
         </div>
     <div className="w-80 h-80 bg-blue-400 hover:shadow-lg rounded-md hover:border-2 hover:shadow-slate-500 ">
-          <img className='h-64 mt-1' src={Sale}  />
+          <img className='h-64 mt-1' src={Sale}  alt="Sale"/>
           
           <div className="flex gap-4 justify-center">
             <Button className='bg-white w-full h-16 text-indigo-700 text-2xl'> Sale & marketing 🡪</Button>
@@ -99,7 +97,7 @@ const Page2 = () => {
         </div>
 
     <div className="w-80 h-80 bg-blue-400 hover:shadow-lg rounded-md hover:border-2 hover:shadow-slate-500 ">
-          <img className='h-64 mt-1' src={Design}  />
+          <img className='h-64 mt-1' src={Design} alt='Design' />
           
           <div className="flex gap-4 justify-center">
             <Button className='bg-white w-full h-16 text-indigo-700 text-2xl'> Design 🡪</Button>
@@ -107,7 +105,7 @@ const Page2 = () => {
         </div>
 
     <div className="w-80 h-80 bg-blue-400 hover:shadow-lg rounded-md hover:border-2 hover:shadow-slate-500 ">
-          <img className='h-64 mt-1' src={Internships}  />
+          <img className='h-64 mt-1' src={Internships}  alt='Internships'/>
           
           <div className="flex gap-4 justify-center">
             <Button className='bg-white w-full h-16 text-indigo-700 text-2xl'> Internships 🡪</Button>

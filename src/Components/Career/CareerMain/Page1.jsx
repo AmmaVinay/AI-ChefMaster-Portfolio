@@ -6,11 +6,12 @@ import { Button } from "@material-tailwind/react";
 const Page1 = () => {
   return (
     <>
-<div className='bg-black flex justify-center items-center' style={{ height: "90vh"}}>
-  <h1 className='text-5xl font-bold text-white sm:text-6xl md:text-7xl lg:text-8xl  text-center '>
-    "Embrace Your Uniqueness"
-  </h1>
-</div>
+<div className='bg-black flex items-center justify-center text-center' style={{height: "90vh"}}>
+  <h1 className='text-6xl sm:text-8xl md:text-9xl   text-center font-extrabold bg-gradient-to-r from-cyan-500 via-blue-500 to-pink-700 text-transparent bg-clip-text'>
+       AI Chef Master
+   </h1>
+ </div>
+
 <div className='bg-gradient-to-b from-sky-400 to-slate-50 py-16 sm:py-24 md:py-32 lg:py-40 xl:py-56'>
 <div className='text-center'>
   <p className='text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl my-2 font-semibold'>Bring your talents to   <span className=" text-green-700 font-extrabold"> AI CHEFMASTER</span>
@@ -32,7 +33,7 @@ const Page1 = () => {
 </div>
 
 <div className='bg-black h-full py-16 md:py-32 lg:py-48'>
-  <h1 className='text-white text-4xl md:text-5xl lg:text-6xl text-center mb-6 md:mb-8 font-bold'>Work at <span className=' bg-green-600 rounded-full shadow-lg shadow-white text-white '>
+  <h1 className='text-white text-4xl md:text-5xl lg:text-6xl text-center mb-6 md:mb-8 font-bold'>Work at <span className=' bg-green-600 rounded-lg px-3 shadow-lg shadow-white text-white '>
    AI CHEFMASTER
 </span>
 </h1>
@@ -42,7 +43,8 @@ const Page1 = () => {
     Work at AI Chef Master 🡪
   </a>
 </div>
-<div className="min-h-screen relative w-full overflow-hidden">
+
+<div className="  relative w-full overflow-hidden" style={{height: "100vh"}}>
   <img
     src={img1} style={{height: "100vh"}}
     className=" w-full opacity-80 object-cover"
@@ -58,7 +60,7 @@ const Page1 = () => {
         "Infusing innovation into every algorithm, I am the AI Chef Master, blending code and cuisine in perfect harmony of taste and tech."
         <br />
         <a
-          className='text-blue-500 text-lg sm:text-xl transform transition duration-300 hover:scale-105 inline-block mt-4'
+          className='text-blue-500 text-lg sm:text-xl md:text-3xl transform transition duration-300 hover:scale-105 inline-block mt-4'
           href="#"
         >
           Learn More about Technology 🡪
