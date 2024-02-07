@@ -1,9 +1,24 @@
 import React from "react";
 import { MdNavigateNext } from "react-icons/md";
-
-const Career = () => {
+import Page1 from "./CareerMain/Page1.jsx";
+import Page2 from "./CareerMain/Page2.jsx";
+import CareerPage from "./CareerMain/CareerPage.jsx";
+import InterviewAtAichefmaster from "./CareerMain/InterviewAtAichefmaster";
+import HiringProcess from "./CareerMain/HiringProcess";
+import { AboutUs } from "./CareerMain/AboutUs";
+import AiFacts from "./CareerMain/AiFacts";
+import FooterItem from "../HomeComponents/FooterItem/index.js";
+const CareerMainPage = () => {
   return (
-    <div className=" container-lg  pb-10 ">
+    <div className=" ">
+      <Page1 />
+      <Page2 />
+      <CareerPage />
+      <InterviewAtAichefmaster />
+      <HiringProcess />
+      <AiFacts />
+      <AboutUs />
+
       <div className="text-center mb-14 p-6 md:p-14">
         <h1 className="sm:text-3xl break-words text-xl md:text-4xl lg:text-5xl font-bold my-6 md:my-14">
           Technology
@@ -35,8 +50,7 @@ const Career = () => {
           className="w-full h-auto"
         />
       </div>
-
-      <div className=" mx-auto">
+      <div className="container-lg mx-auto my-8">
         <h2 className="text-center text-3xl md:text-4xl lg:text-5xl font-bold mb-8 mt-10">
           Scroll down to explore
         </h2>
@@ -71,8 +85,10 @@ const Career = () => {
           </div>
         </div>
       </div>
+
+      <FooterItem />
     </div>
   );
 };
 
-export default Career;
+export default CareerMainPage;

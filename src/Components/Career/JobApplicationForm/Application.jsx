@@ -16,8 +16,7 @@ const Application = ({jobData}) => {
   const [loading, setLoading] = useState(false);
      useEffect(() => {
     const timeout = setTimeout(() => {
-      // Simulate loading for 2 seconds
-      setLoading(true);
+       setLoading(true);
     }, 1000);
     return () => clearTimeout(timeout); // Cleanup on component unmount
   }, []);
@@ -37,8 +36,45 @@ const prevStep = () => {
   const [city, setCity] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
+  
+  const fetchPincodeApi = async (pincode) => {
+    const pincodeUrl = `https://api.postalpincode.in/pincode/${pincode}`;
 
-  const countries = [
+    try {
+      const response = await fetch(pincodeUrl);
+      const data = await response.json();
+
+      if (response.ok && data && data.length > 0) {
+        // Assuming that the API returns an array of locations for the given pincode
+        const locationData = data[0].PostOffice[0];
+
+        setAddress1(locationData.Deliverystatus);
+        setAddress2(locationData.Block);
+        setCity(locationData.District);
+      } else {
+        // Handle the case where the API response is not as expected
+        console.error('Invalid API response:', data);
+      }
+    } catch (error) {
+      console.error('Error fetching details:', error);
+    }
+  };
+
+  const handlePincodeChange = async (e) => {
+    const newPincode = e.target.value;
+    setPincode(newPincode);
+
+    if (newPincode.length === 6) {
+      try {
+        await fetchPincodeApi(newPincode);
+      } catch (error) {
+        console.error('Error handling pincode:', error);
+      }
+    }
+  };
+
+
+  const countries  = [
     "Afghanistan",
     "Albania",
     "Algeria",
@@ -454,6 +490,7 @@ const prevStep = () => {
   const queryParams = new URLSearchParams(location.search);
   const selectedJob = queryParams.get("job");
 
+   
 
   return (
     <>
@@ -491,19 +528,7 @@ const prevStep = () => {
                 </h1>
 
                 <form className="mx-4 sm:mx-6 lg:mx-8 my-5 flex flex-col justify-start gap-y-7">
-                    <div className="flex flex-col text-sm md:flex-row md:items-center md:gap-x-4">
-                        <label className="w-full md:w-1/4 mb-2 md:mb-0">
-                            Country<span style={{ color: "red", fontSize: "1.5rem" }}>*</span>:</label>
-                        <select className="p-2 bg-gray-300 focus:outline-none w-full md:w-2/5">
-                            <option value="Select">Please Select</option>
-                            <option value="">Select Country</option>
-                            {countries.map((country, index) => (
-                            <option key={index} value={country}>
-                                {country}
-                            </option>
-                            ))}
-                        </select>
-                    </div>
+                    
                     <div className="flex flex-col text-sm md:flex-row md:items-center md:gap-x-4">
                         <label className="w-full md:w-1/4 mb-2 md:mb-0">
                             First Name<span style={{ color: "red", fontSize: "1.5rem" }}>*</span>:</label>
@@ -531,7 +556,7 @@ const prevStep = () => {
                     <div className="flex flex-col text-sm md:flex-row md:items-center md:gap-x-4">
                         <label className="w-full md:w-1/4 mb-2 md:mb-0">
                             Pincode<span style={{ color: "red", fontSize: "1.5rem" }}>*</span>:</label>
-                        <input type="text" placeholder="Pincode" className="p-2 bg-gray-300 focus:outline-none w-full md:w-2/5" value={pincode} required onChange={(e)=> setPincode(e.target.value)}/>
+                        <input type="text" placeholder="Pincode" className="p-2 bg-gray-300 focus:outline-none w-full md:w-2/5" value={pincode} required onChange={handlePincodeChange}/>
                     </div>
 
 
@@ -574,6 +599,20 @@ const prevStep = () => {
                             <option value="Uttar Pradesh">Uttar Pradesh</option>
                             <option value="Uttarakhand">Uttarakhand</option>
                             <option value="West Bengal">West Bengal</option>
+                        </select>
+                    </div>
+
+                    <div className="flex flex-col text-sm md:flex-row md:items-center md:gap-x-4">
+                        <label className="w-full md:w-1/4 mb-2 md:mb-0">
+                            Country<span style={{ color: "red", fontSize: "1.5rem" }}>*</span>:</label>
+                        <select className="p-2 bg-gray-300 focus:outline-none w-full md:w-2/5">
+                            <option value="Select">Please Select</option>
+                            <option value="">Select Country</option>
+                            {countries.map((country, index) => (
+                            <option key={index} value={country}>
+                                {country}
+                            </option>
+                            ))}
                         </select>
                     </div>
 

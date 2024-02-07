@@ -82,8 +82,8 @@ const FooterItem = () => {
 
           <hr class="w-full bg-white h-1 m-3" />
 
-          <div class="w-full">
-            <p class="text-bolder text-center">
+          <div class="w-full my-4">
+            <p class="font-bold text-center">
               © 2023 All rights reserved by AI CHEF MASTER.
             </p>
           </div>

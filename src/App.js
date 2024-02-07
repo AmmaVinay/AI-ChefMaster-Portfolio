@@ -4,7 +4,8 @@ import MyNavbar from "./Components/MyNavbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./Components/Home";
 import Product from "./Components/Product";
-import Career from "./Components/Career";
+import CareerMainPage from "./Components/Career/CareerMainPage";
+
 import Company from "./Components/Company";
 import SignUpForm from "./Components/SineUpForm";
 import LoginForm from "./Components/LoginForm";
@@ -12,22 +13,22 @@ import CardAIAssistant from "../src/Components/HomeComponents/CardAIAssistant";
 import CardAIKitchen from "../src/Components/HomeComponents/CardAIKitchen";
 import CardAINutritionManager from "../src/Components/HomeComponents/CardAINutritionManager";
 import NotFound from "./Components/NotFound";
-import SearchJobCards from "./Components/CareerJobs/searchJobCards";
-import FrontendDeveloperEngineer from "./Components/CareerJobs/ListOfCareerJobs/FrontendDeveloperEngineer";
-import BackendDeveloperEngineer from "./Components/CareerJobs/ListOfCareerJobs/BackendDeveloperEngineer";
-import AIEngineer from "./Components/CareerJobs/ListOfCareerJobs/AIEngineer";
-import ServerEngineer from "./Components/CareerJobs/ListOfCareerJobs/ServerEngineer";
-import UiUxDesigner from "./Components/CareerJobs/ListOfCareerJobs/UiUxDesigner";
-import AndroidApplicationDeveloperEngineer from "./Components/CareerJobs/ListOfCareerJobs/AndroidApplicationDeveloperEngineer";
-import IOSApplicationDeveloperEngineer from "./Components/CareerJobs/ListOfCareerJobs/IOSApplicationDeveloperEngineer";
-import FullStackDeveloperEngineer from "./Components/CareerJobs/ListOfCareerJobs/FullStackDeveloperEngineer";
-import CustomerSupportAssociate from "./Components/CareerJobs/ListOfCareerJobs/CustomerSupportAssociate";
-import ResearchDevelopmentEngineer from "./Components/CareerJobs/ListOfCareerJobs/ResearchDevelopmentEngineer";
-import Application from "./Components/CareerJobs/JobApplicationForm/Application";
-import MyExperience from "./Components/CareerJobs/JobApplicationForm/MyExperience";
-import VoluntaryDisclosures from "./Components/CareerJobs/JobApplicationForm/VoluntaryDisclosures";
-import ApplicationQuestions from "./Components/CareerJobs/JobApplicationForm/ApplicationQuestions";
-import Review from "./Components/CareerJobs/JobApplicationForm/Review";
+import SearchJobCards from "./Components/Career/searchJobCards";
+import FrontendDeveloperEngineer from "./Components/Career/ListOfCareerJobs/FrontendDeveloperEngineer";
+import BackendDeveloperEngineer from "./Components/Career/ListOfCareerJobs/BackendDeveloperEngineer";
+import AIEngineer from "./Components/Career/ListOfCareerJobs/AIEngineer";
+import ServerEngineer from "./Components/Career/ListOfCareerJobs/ServerEngineer";
+import UiUxDesigner from "./Components/Career/ListOfCareerJobs/UiUxDesigner";
+import AndroidApplicationDeveloperEngineer from "./Components/Career/ListOfCareerJobs/AndroidApplicationDeveloperEngineer";
+import IOSApplicationDeveloperEngineer from "./Components/Career/ListOfCareerJobs/IOSApplicationDeveloperEngineer";
+import FullStackDeveloperEngineer from "./Components/Career/ListOfCareerJobs/FullStackDeveloperEngineer";
+import CustomerSupportAssociate from "./Components/Career/ListOfCareerJobs/CustomerSupportAssociate";
+import ResearchDevelopmentEngineer from "./Components/Career/ListOfCareerJobs/ResearchDevelopmentEngineer";
+import Application from "./Components/Career/JobApplicationForm/Application";
+import MyExperience from "./Components/Career/JobApplicationForm/MyExperience";
+import VoluntaryDisclosures from "./Components/Career/JobApplicationForm/VoluntaryDisclosures";
+import ApplicationQuestions from "./Components/Career/JobApplicationForm/ApplicationQuestions";
+import Review from "./Components/Career/JobApplicationForm/Review";
 const jobData = [
   {
     title: "Fronend Developer",
@@ -65,7 +66,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product" element={<Product />} />
-        <Route path="/career" element={<Career />} />
+        <Route path="/career" element={<CareerMainPage />} />
         <Route path="/company" element={<Company />} />
         <Route path="/login" element={<LoginForm />} />
         <Route path="/signup" element={<SignUpForm />} />
