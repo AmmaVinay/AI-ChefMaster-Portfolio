@@ -33,10 +33,7 @@ const Page1 = () => {
 </div>
 
 <div className='bg-black h-full py-16 md:py-32 lg:py-48'>
-  <h1 className='text-white text-4xl md:text-5xl lg:text-6xl text-center mb-6 md:mb-8 font-bold'>Work at <span className=' bg-green-600 rounded-lg px-3 shadow-lg shadow-white text-white '>
-   AI CHEFMASTER
-</span>
-</h1>
+  <h1 className='text-white text-4xl md:text-5xl lg:text-6xl text-center mb-6 md:mb-8 font-bold'>Work at AI CHEFMASTER </h1>
   <p className='text-cyan-500 text-3xl md:text-4xl lg:text-5xl text-center mb-6 md:mb-8 font-semibold'>We're more than just a workplace,</p>
   <p className='text-cyan-300 text-3xl md:text-4xl lg:text-5xl text-center mb-10 font-semibold'>we're family</p>
   <a className='text-blue-500 flex justify-center text-2xl md:text-3xl lg:text-4xl font-semibold transform transition duration-500 hover:scale-105' href="#">
