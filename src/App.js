@@ -32,32 +32,32 @@ import Review from "./Components/Career/JobApplicationForm/Review";
 import CareerHomePage from "./Components/Career/CareerHomePage";
 const jobData = [
   {
-    title: "Fronend Developer",
+    title: "Fronend Developer"
   },
   {
-    title: "Backend Developer Engineer",
+    title: "Backend Developer Engineer"
   },
   {
-    title: "AI Engineer",
+    title: "AI Engineer"
   },
   {
-    title: "Android Application Developer Engineer",
+    title: "Android Application Developer Engineer"
   },
   {
-    title: "Customer Support Associate",
+    title: "Customer Support Associate"
   },
   {
-    title: "iOS Application Developer Engineer",
+    title: "iOS Application Developer Engineer"
   },
   {
-    title: "Research and Development Engineer",
+    title: "Research and Development Engineer"
   },
   {
-    title: "Server Engineer",
+    title: "Server Engineer"
   },
   {
-    title: "UI/UX Designer",
-  },
+    title: "UI/UX Designer"
+  }
 ];
 
 const App = () => {

@@ -11,7 +11,7 @@ const listOfJobs = () => [
     jobType: "Intenship",
     jobPath: "/Frontend-Developer-Engineer",
     jobPosted: "01/02/2024",
-    isOpen: true,
+    isOpen: true
   },
   {
     jobTitle: "Backend Developer Engineer",
@@ -22,7 +22,7 @@ const listOfJobs = () => [
     jobType: "Full Time",
     jobPath: "/Backend-Developer-Engineer",
     jobPosted: "01/02/2024",
-    isOpen: false,
+    isOpen: false
   },
   {
     jobTitle: "AI Engineer",
@@ -33,7 +33,7 @@ const listOfJobs = () => [
     jobType: "Full Time",
     jobPath: "/AI-Engineer",
     jobPosted: "01/02/2024",
-    isOpen: true,
+    isOpen: true
   },
 
   {
@@ -45,7 +45,7 @@ const listOfJobs = () => [
     jobType: "Full Time",
     jobPath: "/Server-Engineer",
     jobPosted: "01/02/2024",
-    isOpen: true,
+    isOpen: true
   },
   {
     jobTitle: "UI/UX Designer",
@@ -56,7 +56,7 @@ const listOfJobs = () => [
     jobType: "Full Time",
     jobPath: "/ui-ux-designer",
     jobPosted: "01/02/2024",
-    isOpen: true,
+    isOpen: true
   },
   {
     jobTitle: "Android Application Developer Engineer",
@@ -67,7 +67,7 @@ const listOfJobs = () => [
     jobType: "Full Time",
     jobPath: "/Android-Application-Developer-Engineer",
     jobPosted: "01/02/2024",
-    isOpen: true,
+    isOpen: true
   },
   {
     jobTitle: "iOS Application Developer Engineer",
@@ -78,7 +78,7 @@ const listOfJobs = () => [
     jobType: "Full Time",
     jobPath: "/iOS-Application-Developer-Engineer",
     jobPosted: "01/02/2024",
-    isOpen: true,
+    isOpen: true
   },
   {
     jobTitle: "Full Stack Developer Engineer",
@@ -89,7 +89,7 @@ const listOfJobs = () => [
     jobType: "Full Time",
     jobPath: "/Full-Stack-Developer-Engineer",
     jobPosted: "01/02/2024",
-    isOpen: true,
+    isOpen: true
   },
   {
     jobTitle: "Customer Support Associate",
@@ -100,7 +100,7 @@ const listOfJobs = () => [
     jobType: "Full Time",
     jobPath: "/Customer-Support-Associate",
     jobPosted: "01/02/2024",
-    isOpen: true,
+    isOpen: true
   },
   {
     jobTitle: "Research and Development Engineer",
@@ -111,8 +111,8 @@ const listOfJobs = () => [
     jobType: "Full Time",
     jobPath: "/Research-and-Development-Engineer",
     jobPosted: "01/02/2024",
-    isOpen: true,
-  },
+    isOpen: true
+  }
 ];
 
 function JobCard({ job }) {
