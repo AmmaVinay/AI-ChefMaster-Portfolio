@@ -6,13 +6,13 @@ import { Button } from "@material-tailwind/react";
 const Page1 = () => {
   return (
     <>
-<div className='bg-black flex items-center justify-center text-center' style={{height: "90vh"}}>
-  <h1 className='text-6xl sm:text-8xl md:text-9xl   text-center font-extrabold bg-gradient-to-r from-cyan-500 via-blue-500 to-pink-700 text-transparent bg-clip-text'>
+<div className='bg-black flex items-center justify-center text-center w-full' style={{height: "90vh"}}>
+  <h1 className='text-6xl sm:text-8xl md:text-9xl   text-center font-extrabold bg-gradient-to-r from-cyan-500 via-blue-500 to-pink-700 text-transparent bg-clip-text w-full'>
        AI Chef Master
    </h1>
  </div>
 
-<div className='bg-gradient-to-b from-sky-400 to-slate-50 py-16 sm:py-24 md:py-32 lg:py-40 xl:py-56'>
+<div className='bg-gradient-to-b from-sky-400 to-slate-50 py-16 sm:py-24 md:py-32 lg:py-40 xl:py-56 w-full'>
 <div className='text-center'>
   <p className='text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl my-2 font-semibold'>Bring your talents to   <span className=" text-green-700 font-extrabold"> AI CHEFMASTER</span>
 </p>
@@ -32,7 +32,7 @@ const Page1 = () => {
  </div>
 </div>
 
-<div className='bg-black h-full py-16 md:py-32 lg:py-48'>
+<div className='bg-black h-full py-16 md:py-32 lg:py-48 w-full'>
   <h1 className='text-white text-4xl md:text-5xl lg:text-6xl text-center mb-6 md:mb-8 font-bold'>Work at AI CHEFMASTER </h1>
   <p className='text-cyan-500 text-3xl md:text-4xl lg:text-5xl text-center mb-6 md:mb-8 font-semibold'>We're more than just a workplace,</p>
   <p className='text-cyan-300 text-3xl md:text-4xl lg:text-5xl text-center mb-10 font-semibold'>we're family</p>
@@ -41,7 +41,7 @@ const Page1 = () => {
   </a>
 </div>
 
-<div className="  relative w-full overflow-hidden" style={{height: "100vh"}}>
+<div className="  relative w-full overflow-hidden" style={{height: "100vh"}} >
   <img
     src={img1} style={{height: "100vh"}}
     className=" w-full opacity-80 object-cover"

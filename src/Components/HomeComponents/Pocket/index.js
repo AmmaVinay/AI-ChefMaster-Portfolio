@@ -5,7 +5,8 @@ import aahar from "../../Images/aahar.png";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { v4 as uuidv4 } from "uuid";
 import "../Pocket/index.css";
-import "tailwindcss/tailwind.css"; // Import Tailwind CSS first
+import "tailwindcss/tailwind.css";
+import { Link } from "react-router-dom";
 
 function Pocket() {
   const CardList = [
@@ -15,7 +16,7 @@ function Pocket() {
       header: "AI Assistant",
       description:
         "Elevate your cooking into a tailored and engaging adventure. This feature directs users in creating delightful dishes by enabling customization of quantities and ingredients, unfolding the recipe seamlessly through a blend of audio, text, and video to enhance the culinary journey. For more details on how this feature can transform your cooking experience and unlock a world of possibilities in the kitchen.",
-      pathRoute: "/aiassistant",
+      pathRoute: "/AiAssistant"
     },
     {
       imageUrl: food1,
@@ -23,7 +24,7 @@ function Pocket() {
       header: "Whats in your kitchen",
       description:
         "Convert your leftover ingredients into culinary delights effortlessly. Users simply input their available ingredients, and the module generates a curated list of diverse dishes. Once a choice is made, users receive detailed cooking instructions, empowering them to effortlessly turn their kitchen odds and ends into delicious meals and enjoy your meals with the help of AI Automation.",
-      pathRoute: "/aikitchen",
+      pathRoute: "/aikitchen"
     },
     {
       imageUrl: aahar,
@@ -31,8 +32,8 @@ function Pocket() {
       header: "Nutrition Manager",
       description:
         "The AI Chef Master also offers a Nutrition Manager, catering to gym enthusiasts and fitness aficionados. This feature allows you to monitor your dietary intake, keeping track of what you consume and understanding how different foods can impact your body and overall well-being. Stay on top of your nutritional goals with precision and make informed choices for a healthier lifestyle.",
-      pathRoute: "/ainutritionmanager",
-    },
+      pathRoute: "/ainutritionmanager"
+    }
   ];
 
   return (
@@ -65,14 +66,6 @@ function Pocket() {
               <p className="mb-2 text-md md:text-lg text-justify text-black">
                 {card.description}
               </p>
-              <div className="text-center md:text-start">
-                <a
-                  className="flex items-center learn-more-button font-bold text-md md:text-xl"
-                  href={card.pathRoute}
-                >
-                  <FaArrowRightLong className="mr-2" /> LEARN MORE
-                </a>
-              </div>
             </div>
           </div>
         ))}

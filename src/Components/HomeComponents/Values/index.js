@@ -2,10 +2,9 @@ import React from "react";
 import Graph from "../../Images/graph.png";
 import Focus from "../../Images/focus.png";
 import Customer from "../../Images/customer.png";
-import { FaArrowRightLong } from "react-icons/fa6";
 import { v4 as uuidv4 } from "uuid";
 import "../Values/index.css";
-import "tailwindcss/tailwind.css"; // Import Tailwind CSS first
+import "tailwindcss/tailwind.css";
 
 function Values() {
   const CardList = [
@@ -15,7 +14,7 @@ function Values() {
       header: "Long term Growth",
       description:
         "We are dedicated to expanding our user base through enhanced user experiences. Our strategic vision includes venturing into B2B collaborations, fostering partnerships, and diversifying our dish offerings. This approach ensures sustained innovation and broad market appeal, solidifying our position as a leader in the culinary tech industry.",
-      pathRoute: "/",
+      pathRoute: "/LongTerm"
     },
     {
       imageUrl: Focus,
@@ -23,7 +22,7 @@ function Values() {
       header: "Focus on research and development",
       description:
         "Our foundation is built on innovation, constantly pushing technological boundaries to develop and enhance advanced features. With a dedicated team at the top, we ensure that our company maintains a leading position in industry trends, consistently delivering unparalleled value, and staying firmly committed to continuous improvement.",
-      pathRoute: "/",
+      pathRoute: "/R&D"
     },
     {
       imageUrl: Customer,
@@ -31,8 +30,8 @@ function Values() {
       header: "Customer priorities",
       description:
         "Our focus lies in offering a user-friendly interface that guides individuals in creating personalized recipes. Simultaneously, we seamlessly integrate curated content into our user experience, promoting overall well-being by providing nutritional insights and lifestyle tips.",
-      pathRoute: "/",
-    },
+      pathRoute: "/Customer"
+    }
   ];
 
   return (
@@ -65,14 +64,6 @@ function Values() {
               <p className="mb-2 text-md md:text-lg text-justify text-black">
                 {card.description}
               </p>
-              <div className="text-center md:text-start">
-                <a
-                  className="flex items-center learn-more-button font-bold text-md md:text-xl"
-                  href={card.pathRoute}
-                >
-                  <FaArrowRightLong className="mr-2" /> LEARN MORE
-                </a>
-              </div>
             </div>
           </div>
         ))}

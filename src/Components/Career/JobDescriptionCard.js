@@ -7,6 +7,7 @@ import { AiOutlineLinkedin } from "react-icons/ai";
 import { BsShare } from "react-icons/bs";
 
 function JobDescriptionCard({ jobData }) {
+  
   const {
     title,
     location,
@@ -34,7 +35,7 @@ function JobDescriptionCard({ jobData }) {
           <div className="flex flex-col justify-around items-center">
             <div>
               <Link to={`/application?job=${encodeURIComponent(title)}`}>
-                <Button className="px-10  bg-blue-500 hover:bg-blue-700 transition ease-in-out transition-shadow">
+                <Button className="px-10  bg-blue-500 hover:bg-blue-700 ease-in-out transition-shadow">
                   Apply
                 </Button>
               </Link>

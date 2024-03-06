@@ -5,13 +5,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./Components/Home";
 import Product from "./Components/Product";
 import Technology from "./Components/Career/Technology";
-
+import Hiring from "./Components/Career/CareerMain/HiringProcess";
 import Company from "./Components/Company";
 import SignUpForm from "./Components/SineUpForm";
 import LoginForm from "./Components/LoginForm";
-import CardAIAssistant from "../src/Components/HomeComponents/CardAIAssistant";
-import CardAIKitchen from "../src/Components/HomeComponents/CardAIKitchen";
-import CardAINutritionManager from "../src/Components/HomeComponents/CardAINutritionManager";
 import NotFound from "./Components/NotFound";
 import SearchJobCards from "./Components/Career/searchJobCards";
 import FrontendDeveloperEngineer from "./Components/Career/ListOfCareerJobs/FrontendDeveloperEngineer";
@@ -30,6 +27,15 @@ import VoluntaryDisclosures from "./Components/Career/JobApplicationForm/Volunta
 import ApplicationQuestions from "./Components/Career/JobApplicationForm/ApplicationQuestions";
 import Review from "./Components/Career/JobApplicationForm/Review";
 import CareerHomePage from "./Components/Career/CareerHomePage";
+import RD from "./Components/CardData/RD";
+import LongTerm from "./Components/CardData/LongTerm";
+import Customer from "./Components/CardData/Customer";
+import AboutUs from "./Components/Team/About";
+import Team from "./Components/Team/Team";
+import AiAssistant from "./Components/AIChefPocketData/AiAssistant";
+import Kitchen from "./Components/AIChefPocketData/Kitchen";
+import NutritionManager from "./Components/AIChefPocketData/NutritionManager";
+import JobRoles from "./Components/Career/searchJobCards";
 const jobData = [
   {
     title: "Fronend Developer"
@@ -71,13 +77,17 @@ const App = () => {
         <Route path="/company" element={<Company />} />
         <Route path="/login" element={<LoginForm />} />
         <Route path="/signup" element={<SignUpForm />} />
-        <Route path="/aiassistant" element={<CardAIAssistant />} />
-        <Route path="/aikitchen" element={<CardAIKitchen />} />
+        <Route path="/aikitchen" element={<Kitchen />} />
         <Route path="/technology" element={<Technology />} />
-        <Route
-          path="/ainutritionmanager"
-          element={<CardAINutritionManager />}
-        />
+        <Route path="/R&D" element={<RD />} />
+        <Route path="/LongTerm" element={<LongTerm />} />
+        <Route path="/Customer" element={<Customer />} />
+        <Route path="/AboutUs" element={<AboutUs />} />
+        <Route path="/Team" element={<Team />} />
+        <Route path="/AiAssistant" element={<AiAssistant />} />
+        <Route path="/Hiring" element={<Hiring />} />
+        <Route path="/Job" element={<JobRoles />} />
+        <Route path="/ainutritionmanager" element={<NutritionManager />} />
         <Route path="/searchJobCards" element={<SearchJobCards />} />
         <Route
           path="/Frontend-Developer-Engineer"

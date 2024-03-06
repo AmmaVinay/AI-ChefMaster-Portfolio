@@ -4,12 +4,13 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareThreads } from "react-icons/fa6";
 import { Button } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 import "../FooterItem/index.css";
 const FooterItem = () => {
   return (
     <div className="footer rounded-0 card bg-black shadow-lg mt-0 golden-text">
       <div className="text-center my-5">
-        <h1 className="footer-heading mb-3">Ready to do your best work?</h1>
+        <h1 className="footer-heading mb-3">Ready to do your best work? </h1>
         <h5 className="text-2xl font-bold mb-4">Let's get you started.</h5>
         <div className="flex justify-center ">
           <Button className="footer-button p-3 hover:shadow-lg w-48 md:w-68 rounded font-sans text-white text-sm md:text-lg transform transition duration-500 hover:scale-110">
@@ -23,10 +24,10 @@ const FooterItem = () => {
       <div class="fluid-container items-center">
         <div class="flex flex-wrap">
           <div class="w-full lg:w-3/12 md:w-4/12 sm:w-6/12 flex justify-center mb-5">
-            <ul class="list-items-styles">
+            <ul className="flex flex-col">
               <h2 class="footer-heading">Company</h2>
-              <li>About Us</li>
-              <li>Team</li>
+              <Link to="/aboutUs">About Us</Link>
+              <Link to="/Team">Team</Link>
               <li>Career</li>
               <li>Blogs</li>
               <li>News</li>

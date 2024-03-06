@@ -1,9 +1,14 @@
 import React from "react";
+import AiAssistant from "../AIChefPocketData/AiAssistant";
+import Kitchen from "../AIChefPocketData/Kitchen";
+import NutritionManager from "../AIChefPocketData/NutritionManager";
 
 const Product = () => {
   return (
     <div>
-      <h1>Product</h1>
+      <AiAssistant />
+      <Kitchen />
+      <NutritionManager />
     </div>
   );
 };
