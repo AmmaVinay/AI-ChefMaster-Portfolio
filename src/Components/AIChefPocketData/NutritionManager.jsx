@@ -4,10 +4,12 @@ import ChefImg from "./Data/images/Img10.jpg";
 
 const NutritionManager = () => {
   return (
-    <div className="bg-[#8BE0E9]">
-      <div className="flex w-full justify-center items-center p-2 bg-[#1F969B] text-white font-semibold text-[2rem]">
-        Nutrition Manager
-      </div>
+    <div className="mb-5">
+        <div style={{ backgroundColor: 'rgba(0, 84, 79, 0.5)' }} className="flex justify-center items-center h-28">
+        <h1 style={{textShadow: '2px 0.5px 0.5px rgba(0, 0, 0, 0.5)'}} className='bg-green-500 text-transparent bg-clip-text text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold font-serif py-4 px-6 md:px-8 lg:px-10 xl:px-12 text-center md:text-left'>
+            Nutrition Manager
+          </h1>
+        </div>
       <div>
         <img src={ChefImg} className="w-full h-auto md:h-screen" alt="" />
       </div>
@@ -19,16 +21,14 @@ const NutritionManager = () => {
           Key Features
         </p>
       </div>
-      <div className="bg-[#8BE0E9]">
-{KeyFeaturesData.map((obj, index) => (
-  <div key={index} className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'} items-center justify-center w-full mx-auto py-6 px-4 sm:px-6 lg:px-8`}>
-     <div className="flex flex-col justify-center max-w-md md:max-w-none px-6 md:px-20">
-      <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4 md:mb-6">{obj.heading}</h3>
-      <p className="text-lg sm:text-lg md:text-xl">{obj.para1}</p>
-    </div>
-  </div>
-))}
-      </div>
+      {KeyFeaturesData.map((obj, index) => (
+        <div key={index} className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'} items-center justify-center w-full mx-auto py-6 px-4 sm:px-6 lg:px-8`}>
+          <div className="flex flex-col justify-center max-w-md md:max-w-none px-6 md:px-20">
+            <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4 md:mb-6">{obj.heading}</h3>
+            <p className="text-lg sm:text-lg md:text-xl">{obj.description}</p>
+          </div>
+        </div>
+      ))}
       <div className="flex justify-center items-center">
         <p className="font-bold text-[2rem] mt-6 font-serif">
           How It Works:

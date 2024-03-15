@@ -1,60 +1,75 @@
 import React from "react";
-// import img2 from "../Team/img2.jpg";
-import TextImage from "./TextImage";
-// import Footer from '../Footer/Footer'
+import { Fade, Slide } from "react-reveal";
+import { v4 as uuidv4 } from "uuid";
+import "animate.css";
 
+const AnimatedCard = ({ imageUrl, imageAlt, heading, description, index }) => {
+  return (
+    <div
+      className={`flex flex-col md:flex-row ${index % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"} justify-center items-center w-full gap-8 md:gap-12 mx-auto my-12 px-4 sm:px-6 lg:px-8`}
+    >
+      <Fade left={index % 2 !== 0} right={index % 2 === 0}>
+        <img
+          src={imageUrl}
+          className="w-full h-64 md:h-96 md:w-1/2 rounded-lg shadow-lg"
+          alt={imageAlt}
+        />
+      </Fade>
+      <div className="flex flex-col justify-center gap-6 md:gap-12 md:pt-0 items-center max-w-md md:max-w-[400px]">
+        <Slide left={index % 2 === 0} right={index % 2 !== 0}>
+          <h3 className="text-xl sm:text-lg md:text-2xl lg:text-3xl font-bold text-center md:text-left">
+            {heading}
+          </h3>
+        </Slide>
+        <Slide left={index % 2 === 0} right={index % 2 !== 0}>
+          <p className="text-lg sm:text-lg md:text-xl text-center md:text-left">
+            {description}
+          </p>
+        </Slide>
+      </div>
+    </div>
+  );
+};
+ const sectionData = [
+  {
+    heading: 'Customer-Centric Approach:',
+    description: 'Our commitment is centered around putting customers first, ensuring their needs and satisfaction drive every decision we make.',
+    imageUrl: "https://info.ehl.edu/hubfs/Customer%20centricity-1.jpeg",
+  },
+  {
+    heading: 'Seamless User Experience:',
+    description: 'We prioritize creating a seamless and enjoyable user experience, aiming to exceed customer expectations at every touchpoint',
+    imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrKaILV-CeeumdZj1go128gwCAszmRsg-nsQ&usqp=CAU',
+  },
+  {
+    heading: 'Responsive Customer Support:',
+    description: 'Our dedicated support team is available around the clock to address your queries and provide timely assistance, ensuring you always feel supported.',
+    imageUrl: 'https://media.istockphoto.com/id/1059548978/photo/technical-support-concept-business-person-touching-helpdesk-icon-on-screen-hotline-assistance.jpg?s=612x612&w=0&k=20&c=ur4WfDWZzBWZ4-k8UdZ5SPxJ9M4r1uRAsgFx6GoBs-4=',
+  },
+  {
+    heading: 'Product Quality and Reliability:',
+    description: 'Quality and reliability are at the core of what we do. We strive to deliver products that not only meet but exceed your expectations in terms of performance and durability',
+    imageUrl: 'https://media.istockphoto.com/id/683334642/photo/quality-assurance-mechanism-of-metal-cogwheels-3d.jpg?s=612x612&w=0&k=20&c=A5xcmoGaxDN8igsXSQhW1WdHMB1JtDStAOId2uI-sO4=',
+  },
+ ];
 const Customer = () => {
   return (
     <>
-      <div className=" bg-cyan-300 h-full min-h-screen w-full">
-        <div className="flex justify-center items-center h-28 bg-cyan-600">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white font-serif py-4 px-6 md:px-8 lg:px-10 xl:px-12 text-center md:text-left">
+      <div className="h-full min-h-screen w-full">
+        <div style={{ backgroundColor: 'rgba(0, 84, 79, 0.5)' }} className="flex justify-center items-center h-28">
+          <h1 style={{textShadow: '2px 0.5px 0.5px rgba(0, 0, 0, 0.5)'}} className='bg-green-500 text-transparent bg-clip-text text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold font-serif py-4 px-6 md:px-8 lg:px-10 xl:px-12 text-center md:text-left'>
             CUSTOMER PRIORITIES
           </h1>
         </div>
-        <TextImage />
-        <div className="text-lg sm:text-xl md:text-2xl leading-8">
-          <p className="px-12 py-8">
-            At its core, "Customer Priorities" ensures a seamless journey
-            through a diverse array of dishes, ranging from luxury options to
-            quick and healthy alternatives .The AI Assistant module introduces a
-            unique approach to recipe exploration ,allowing users to
-            effortlessly discover, customize, and cook dishes with detailed
-            step-by-step guidance. With features like customizable ingredients,
-            portion sizes, and spice levels, our platform tailors the cooking
-            experience to individual preferences.
-          </p>
-          <p className="py-8 ml-36">
-            The "What's in Your Kitchen" functionality takes personalization
-            further by recommending dishes based on available ingredients. Users
-            can seamlessly transition from ingredient exploration to detailed
-            recipe instructions,simplifying the cooking process and making the
-            most of their kitchen inventory.
-          </p>
-          <p className="px-12 py-8">
-            In the realm of health and wellness, our "Nutrition Manager" stands
-            out. By gathering user details, lifestyle choices, and dietary
-            restrictions, we craft personalized diet plans that go beyond
-            traditional recipe platforms. This module focuses on holistic
-            well-being by offering insights into daily routines, BMI
-            calculations, and calorie requirements.
-          </p>
-          <p className="py-8 ml-36">
-            On the B2Bfront, our restaurant-focused model caters to industry
-            needs, streamlining operations from order and inventory management
-            to analytics and invoicing. The inclusion of an AI F&B team and food
-            costing features showcases our commitment to innovation and
-            cost-efficiency in the competitive restaurant landscape.
-          </p>
-          <p className="px-12 py-8">
-            In essence, "Customer Priorities" underscores our dedication to
-            providing not just recipes but a tailored and seamless experience
-            that respects the individual preferences and priorities of our
-            users, both on the consumer and business fronts
-          </p>
-        </div>
+
+      <div className="mt-6">
+        {sectionData.map((obj, index) => (
+          <AnimatedCard key={uuidv4()} index={index} {...obj} />
+        ))}
       </div>
-     </>
+
+        </div>
+    </>
   );
 };
 

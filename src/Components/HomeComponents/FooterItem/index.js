@@ -14,18 +14,22 @@ const FooterItem = () => {
         <h5 className="text-2xl font-bold mb-4">Let's get you started.</h5>
         <div className="flex justify-center ">
           <Button className="footer-button p-3 hover:shadow-lg w-48 md:w-68 rounded font-sans text-white text-sm md:text-lg transform transition duration-500 hover:scale-110">
-            <a href="/signup" className="no-underline text-white ">
+            <Link
+              to="/SineUp"
+              className="no-underline"
+              style={{ color: "hsl(50, 33%, 30%)" }}
+            >
               SIGN UP NOW ➪
-            </a>
+            </Link>
           </Button>
         </div>
       </div>
 
-      <div class="fluid-container items-center">
-        <div class="flex flex-wrap">
-          <div class="w-full lg:w-3/12 md:w-4/12 sm:w-6/12 flex justify-center mb-5">
+      <div className="fluid-container items-center">
+        <div className="flex flex-wrap">
+          <div className="w-full lg:w-3/12 md:w-4/12 sm:w-6/12 flex justify-center mb-5">
             <ul className="flex flex-col">
-              <h2 class="footer-heading">Company</h2>
+              <h2 className="footer-heading">Company</h2>
               <Link to="/aboutUs">About Us</Link>
               <Link to="/Team">Team</Link>
               <li>Career</li>
@@ -34,36 +38,36 @@ const FooterItem = () => {
             </ul>
           </div>
 
-          <div class="w-full lg:w-3/12 md:w-4/12 sm:w-6/12 flex justify-center mb-5">
-            <ul class="list-items-styles">
-              <h2 class="footer-heading">Contact</h2>
+          <div className="w-full lg:w-3/12 md:w-4/12 sm:w-6/12 flex justify-center mb-5">
+            <ul className="list-items-styles">
+              <h2 className="footer-heading">Contact</h2>
               <li>Help & Support</li>
             </ul>
           </div>
 
-          <div class="w-full lg:w-3/12 md:w-4/12 sm:w-6/12 flex justify-center mb-5">
-            <ul class="list-items-styles">
-              <h2 class="footer-heading">Follow ACM</h2>
-              <li class="flex items-center">
-                <span class="mr-2">
+          <div className="w-full lg:w-3/12 md:w-4/12 sm:w-6/12 flex justify-center mb-5">
+            <ul className="list-items-styles">
+              <h2 className="footer-heading">Follow ACM</h2>
+              <li className="flex items-center">
+                <span className="mr-2">
                   <FaInstagramSquare />
                 </span>{" "}
                 Instagram
               </li>
-              <li class="flex items-center">
-                <span class="mr-2">
+              <li className="flex items-center">
+                <span className="mr-2">
                   <FaXTwitter />
                 </span>{" "}
                 Twitter
               </li>
-              <li class="flex items-center">
-                <span class="mr-2">
+              <li className="flex items-center">
+                <span className="mr-2">
                   <FaLinkedin />
                 </span>{" "}
                 LinkedIn
               </li>
-              <li class="flex items-center">
-                <span class="mr-2">
+              <li className="flex items-center">
+                <span className="mr-2">
                   <FaSquareThreads />
                 </span>{" "}
                 Thread
@@ -71,9 +75,9 @@ const FooterItem = () => {
             </ul>
           </div>
 
-          <div class="w-full lg:w-3/12 md:w-4/12 sm:w-6/12 flex justify-center mb-5">
-            <ul class="list-items-styles">
-              <h2 class="footer-heading">Quick Links</h2>
+          <div className="w-full lg:w-3/12 md:w-4/12 sm:w-6/12 flex justify-center mb-5">
+            <ul className="list-items-styles">
+              <h2 className="footer-heading">Quick Links</h2>
               <li>Privacy Policy</li>
               <li>Terms & Refund</li>
               <li>About Us</li>
@@ -81,10 +85,10 @@ const FooterItem = () => {
             </ul>
           </div>
 
-          <hr class="w-full bg-white h-1 m-3" />
+          <hr className="w-full bg-white h-1 m-3" />
 
-          <div class="w-full my-4">
-            <p class="font-bold text-center">
+          <div className="w-full my-4">
+            <p className="font-bold text-center">
               © 2023 All rights reserved by AI CHEF MASTER.
             </p>
           </div>

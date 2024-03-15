@@ -7,7 +7,7 @@ import img1 from "./img1.jpg";
 const About = () => {
   return (
     <>
-      <div className=" p-6 bg-gradient-to-r from-cyan-300 to-neutral-50 h-full min-h-screen w-full">
+      <div className=" p-6 h-full min-h-screen w-full">
         <div className="flex justify-center item-center h-32 bg-cyan-600 border rounded-lg mb-8 md:ml-20 md:mr-20 mt-16">
           <h1 className="text-5xl font-bold text-white font-serif py-8">
             ABOUT US
@@ -24,6 +24,7 @@ const About = () => {
             className="border rounded-3xl w-full md:w-2/5 mb-8 md:mb-0"
             style={{ height: "400px" }}
             src={img1}
+            alt="about"
           />
         </div>
         <div className="flex flex-col md:flex-row justify-around">
@@ -32,7 +33,7 @@ const About = () => {
             Harnessing The Power Of Artificial Intelligence To Inspire And
             Innovate In The Kitchen."
           </p>
-          <img className="h-72 w-full md:w-96 border rounded-3xl" src={img2} />
+          <img className="h-72 w-full md:w-96 border rounded-3xl" src={img2} alt="about" />
         </div>
         <div className="flex flex-col md:flex-row-reverse justify-around py-24">
           <p className="tracking-widest font-normal w-full md:w-96 text-3xl .text-right mb-8 md:mb-0">
@@ -40,7 +41,7 @@ const About = () => {
             Expertise In machine Learning And Data Analysis To Create A
             One-Of-A-Kind Cooking Experience."
           </p>
-          <img className="h-72 w-full md:w-96 border rounded-3xl" src={img3} />
+          <img className="h-72 w-full md:w-96 border rounded-3xl" src={img3} alt="about" />
         </div>
         <div className="flex flex-col md:flex-row justify-around py-24">
           <p className="tracking-widest font-normal w-full md:w-96 text-3xl .text-left mb-8 md:mb-0">
@@ -48,7 +49,7 @@ const About = () => {
             AI-Driven Platform Is Designed To Elevate Your Cooking Skills,
             Unleash Your Creativity, And Delight Your Taste Buds."
           </p>
-          <img className="h-72 w-full md:w-96 border rounded-3xl" src={img4} />
+          <img className="h-72 w-full md:w-96 border rounded-3xl" src={img4} alt="about" />
         </div>
         <div className="text-center text-3xl justify-center py-24">
           <h1 className="text-center font-medium font-sans .text-center mx-10 md:mx-24 py-5 pb-12 tracking-widest">

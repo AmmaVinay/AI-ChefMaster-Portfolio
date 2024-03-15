@@ -18,7 +18,7 @@ const Technology = () => {
           className="w-full h-auto"
         />
       </div>
-      <div className=" my-36">
+      <div className=" my-12 sm:my-24 md:my-36">
         <p className="text-center text-lg md:text-2xl font-medium">
           "Empower your culinary creations with the artistry of AI. Our team of
           software engineers at AI Chef master crafts algorithms that turn

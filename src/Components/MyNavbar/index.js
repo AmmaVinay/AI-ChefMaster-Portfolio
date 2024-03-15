@@ -1,69 +1,77 @@
 // MyNavbar.jsx
-import { Fragment } from "react";
+// import { Fragment } from "react";
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 import "../MyNavbar/index.css";
+import { Link, useLocation } from "react-router-dom";
 
 export default function MyNavbar() {
+  const location = useLocation();
+
   return (
     <>
-      <Disclosure as="nav" className="my-navbar shadow-lg sticky top-0 z-50">
+      <Disclosure as="nav" className="my-navbar shadow-xl sticky top-0 z-50">
         {({ open }) => (
           <>
-            <div className="mx-auto p-2 max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-[1262px] py-1 px-2 sm:px-6 lg:px-8">
               <div className="relative flex h-16 items-center">
                 <div className="flex items-center w-full justify-between">
-                  <div className="lg:mr-24">
+                  <Link
+                    className={`  ${
+                      location.pathname === "/" ? "active" : ""
+                    } text-3xl font-semibold font-primary flex items-center justify-between gap-x-2`}
+                    to="/"
+                  >
                     <img
-                      className="h-10 rounded w-auto navbar-logo ml-5"
-                      src="https://media.istockphoto.com/id/1205650605/vector/master-chef-symbol.jpg?s=612x612&w=0&k=20&c=5-Ve09633yClmlP02mOwiIPC3Tn3mCyxcut5WvDU6Wo="
-                      alt="AI CHEF MASTER"
+                      className="h-10 rounded w-auto navbar-logo"
+                      src="/assets/logo.jpeg"
+                      alt="logo"
                     />
-                  </div>
-
+                    <h1>AI Chef Master</h1>
+                  </Link>
                   <div className="hidden sm:block">
                     <div className="flex self-start space-x-4 ">
-                      <a
-                        href="/"
+                      <Link
+                        onClick={() => window.scrollTo(0, 0)}
+                        to="/"
                         className={`nav-link ${
-                          window.location.pathname === "/" ? "active" : ""
-                        } rounded-md px-3 py-2 text-sm font-medium `}
+                          location.pathname === "/" ? "active" : ""
+                        } rounded-md px-3 py-2 text-sm font-medium bg-[#00544f]`}
                       >
                         Home
-                      </a>
-                      <a
-                        href="/product"
+                      </Link>
+                      <Link
+                        onClick={() => window.scrollTo(0, 0)}
+                        to="/product"
                         className={`nav-link ${
-                          window.location.pathname === "/product"
-                            ? "active"
-                            : ""
+                          location.pathname === "/product" ? "active" : ""
                         } rounded-md px-3 py-2 text-sm font-medium`}
                       >
                         Product
-                      </a>
-                      <a
-                        href="/career"
+                      </Link>
+                      <Link
+                        onClick={() => window.scrollTo(0, 0)}
+                        to="/career"
                         className={`nav-link ${
-                          window.location.pathname === "/career" ? "active" : ""
+                          location.pathname === "/career" ? "active" : ""
                         } rounded-md px-3 py-2 text-sm font-medium`}
                       >
                         Career
-                      </a>
-                      <a
-                        href="/company"
+                      </Link>
+                      <Link
+                        onClick={() => window.scrollTo(0, 0)}
+                        to="/company"
                         className={`nav-link ${
-                          window.location.pathname === "/company"
-                            ? "active"
-                            : ""
+                          location.pathname === "/company" ? "active" : ""
                         } rounded-md px-3 py-2 text-sm font-medium`}
                       >
                         Company
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div className="sm:hidden">
-                    <Disclosure.Button className="text-white font-extrabold p-2">
+                    <Disclosure.Button className="text-black font-extrabold p-2">
                       {open ? (
                         <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                       ) : (
@@ -77,38 +85,42 @@ export default function MyNavbar() {
 
             <Disclosure.Panel className="sm:hidden">
               <div className="space-y-1 px-2 pb-3 pt-2">
-                <a
-                  href="/"
-                  className={` text-black  hover:bg-gray-100 hover:text-white block rounded-md px-3 py-2 text-base font-medium ${
-                    window.location.pathname === "/" ? "active" : ""
-                  }`}
+                <Link
+                  onClick={() => window.scrollTo(0, 0)}
+                  to="/"
+                  className={`nav-link ${
+                    location.pathname === "/" ? "active" : ""
+                  } rounded-md px-3 py-2 text-sm font-medium bg-[#00544f]`}
                 >
-                  HOME
-                </a>
-                <a
-                  href="/product"
-                  className={`text-black  hover:bg-gray-100 hover:text-white block rounded-md px-3 py-2 text-base font-medium ${
-                    window.location.pathname === "/product" ? "active" : ""
-                  }`}
+                  Home
+                </Link>
+                <Link
+                  onClick={() => window.scrollTo(0, 0)}
+                  to="/product"
+                  className={`nav-link ${
+                    location.pathname === "/product" ? "active" : ""
+                  } rounded-md px-3 py-2 text-sm font-medium`}
                 >
-                  PRODUCT
-                </a>
-                <a
-                  href="/career"
-                  className={`text-black hover:bg-gray-100 hover:text-white block rounded-md px-3 py-2 text-base font-medium ${
-                    window.location.pathname === "/career" ? "active" : ""
-                  }`}
+                  Product
+                </Link>
+                <Link
+                  onClick={() => window.scrollTo(0, 0)}
+                  to="/career"
+                  className={`nav-link ${
+                    location.pathname === "/career" ? "active" : ""
+                  } rounded-md px-3 py-2 text-sm font-medium`}
                 >
-                  CAREER
-                </a>
-                <a
-                  href="/company"
-                  className={`text-black hover:bg-gray-100 hover:text-white block rounded-md px-3 py-2 text-base font-medium ${
-                    window.location.pathname === "/company" ? "active" : ""
-                  }`}
+                  Career
+                </Link>
+                <Link
+                  onClick={() => window.scrollTo(0, 0)}
+                  to="/company"
+                  className={`nav-link ${
+                    location.pathname === "/company" ? "active" : ""
+                  } rounded-md px-3 py-2 text-sm font-medium`}
                 >
-                  COMPANY
-                </a>
+                  Company
+                </Link>
               </div>
             </Disclosure.Panel>
           </>

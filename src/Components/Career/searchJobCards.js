@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useSpring, animated } from "react-spring";
+import { Fade } from 'react-reveal';
+import { ImLocation } from "react-icons/im";
 
 const listOfJobs = () => [
   {
@@ -116,23 +119,38 @@ const listOfJobs = () => [
 ];
 
 function JobCard({ job }) {
-  const isJobOpen = job.isOpen; // Replace 'jobExists' with the actual property that indicates whether the job is open
+  const isJobOpen = job.isOpen;
+  const [hovered, setHovered] = React.useState(false);
+
+  const cardSpring = useSpring({
+    boxShadow: hovered
+      ? "inset 35px 35px 70px #569efc, inset -35px -35px 70px #ffffff"
+      : "inset 35px 35px 70px #a8a8a8, inset -35px -35px 70px #ffffff",
+    transform: hovered ? "scale(1.05)" : "scale(1)"
+  });
 
   return (
-    <div className="bg-white border border-green-300 p-4 rounded-lg shadow-lg max-w-sm mb-4">
+    <animated.div
+      style={{
+        ...cardSpring,
+        transition: "box-shadow 0.3s, transform 0.3s"
+      }}
+      onMouseOver={() => setHovered(true)}
+      onMouseOut={() => setHovered(false)}
+      className="bg-white border flex-grow  border-green-300 p-4 rounded-lg shadow-lg max-w-sm"
+    >
       <div className="flex flex-col sm:flex-row justify-between mb-3 text-gray-500 items-center">
-        <div className="flex items-center">
-          <span className="mr-2 text-lg">🌐</span>
-          <div>
-            <b className="text-gray-800">Location:</b>
-            <span className="ml-1">
-              <span className="location-tag">India | {job.jobLocation}</span>
-            </span>
-          </div>
+        <div className="flex font-semibold items-center">
+          <span className="mr-2 text-lg">
+            <ImLocation />
+          </span>
+          <span className="ml-1">
+            <span className="location-tag">India | {job.jobLocation}</span>
+          </span>
         </div>
-        <b>
-          <i>Posted on : {job.jobPosted}</i>
-        </b>
+        <span className=" font-semibold">
+          <i>Posted on: {job.jobPosted}</i>
+        </span>
       </div>
       <h1 className="mb-3 text-2xl font-semibold text-green-800">
         {job.jobTitle}
@@ -140,12 +158,12 @@ function JobCard({ job }) {
       <p className="text-gray-700 overflow-hidden line-clamp-3">
         {job.jobDescription}
       </p>
-      <div className="flex flex-col sm:flex-row justify-between items-center mt-3">
+      <div className="flex flex-col gap-2 md:gap-0 sm:flex-row justify-between items-center mt-3">
         <div>
           <strong className="text-green-800">Job Type:</strong> {job.jobType}
         </div>
         {isJobOpen ? (
-          <Link to={job.jobPath}>
+          <Link onClick={() => window.scrollTo(0, 0)} to={job.jobPath}>
             <button className="bg-green-500 text-white py-1 px-3 rounded-md hover:bg-green-600 transition">
               {job.jobApply}
             </button>
@@ -154,7 +172,7 @@ function JobCard({ job }) {
           <span className="text-red-500">Application Closed</span>
         )}
       </div>
-    </div>
+    </animated.div>
   );
 }
 
@@ -170,7 +188,7 @@ function SearchJobCards() {
 
   return (
     <>
-      <div className="" style={{ backgroundColor: "#f6ffe4" }}>
+      <div>
         <h1 className="text-4xl mb-8 md:py-18 py-12 md:text-5xl lg:text-6xl text-center font-bold text-green-800">
           Search Jobs at AI CHEF MASTER
         </h1>
@@ -195,9 +213,11 @@ function SearchJobCards() {
           </div>
         </div>
 
-        <div className="flex justify-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 place-items-center">
+        <div className="flex flex-wrap gap-4 mb-8 px-4 justify-center items-stretch">
           {filteredJobs.map((job, index) => (
-            <JobCard key={index} job={job} />
+            <Fade key={index} delay={index * 100}>
+                <JobCard key={index} job={job} />
+            </Fade>
           ))}
         </div>
       </div>

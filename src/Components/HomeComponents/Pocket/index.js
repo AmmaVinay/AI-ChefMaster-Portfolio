@@ -1,12 +1,38 @@
 import React from "react";
+import { Fade, Zoom } from "react-reveal";
+import { v4 as uuidv4 } from "uuid";
 import AIimage from "../../Images/AIimage.png";
 import food1 from "../../Images/food1.png";
 import aahar from "../../Images/aahar.png";
-import { FaArrowRightLong } from "react-icons/fa6";
-import { v4 as uuidv4 } from "uuid";
-import "../Pocket/index.css";
 import "tailwindcss/tailwind.css";
-import { Link } from "react-router-dom";
+import "animate.css";
+import "../Pocket/index.css";
+
+const AnimatedCard = ({ imageUrl, imageAlt, header, description }) => {
+  return (
+    <div
+      className={`container flex flex-col justify-center items-center mt-6 md:mt-0 value-card-container`}
+    >
+      <Fade>
+        <Zoom>
+          <div className="flex justify-center">
+            <img
+              src={imageUrl}
+              alt={imageAlt}
+              className="object-scale-down h-48 w-full md:w-96 animate-pulse"
+            />
+          </div>
+          <h1 className="mb-2 text-center text-xl md:text-3xl text-black">
+            {header}
+          </h1>
+          <div className="mb-2 text-md md:text-lg text-justify text-black">
+            {description}
+          </div>
+        </Zoom>
+      </Fade>
+    </div>
+  );
+};
 
 function Pocket() {
   const CardList = [
@@ -20,8 +46,8 @@ function Pocket() {
     },
     {
       imageUrl: food1,
-      imageAlt: "Whats in your kitchen",
-      header: "Whats in your kitchen",
+      imageAlt: "Chef Intelligence",
+      header: "Chef Intelligence",
       description:
         "Convert your leftover ingredients into culinary delights effortlessly. Users simply input their available ingredients, and the module generates a curated list of diverse dishes. Once a choice is made, users receive detailed cooking instructions, empowering them to effortlessly turn their kitchen odds and ends into delicious meals and enjoy your meals with the help of AI Automation.",
       pathRoute: "/aikitchen"
@@ -37,37 +63,17 @@ function Pocket() {
   ];
 
   return (
-    <div className="background-style-pocket break-words text-black px-6 md:px-10 py-8 md:py-20 text-center ">
-      <h1
-        style={{ lineHeight: "3rem" }}
-        className="main-heading font-semibold text-2xl md:text-4xl mb-4 md:mb-8"
-      >
+    <div className="values-container background-style-pocket break-words text-black px-6 md:px-10 py-8 md:pt-20 text-center">
+      <h1 className="main-heading text-4xl md:text-5xl mb-6">
         THE AI CHEF IN YOUR POCKET
       </h1>
-      <p className="text-xl md:text-3xl mb-4">
-        Create and customize your favourite AI CHEF
+      <p className="text-xl md:text-2xl mb-8">
+        Create and customize your favorite AI CHEF
       </p>
 
-      <div className="grid grid-cols-1 ">
+      <div className="grid grid-cols-1 items-center">
         {CardList.map((card) => (
-          <div
-            key={uuidv4()}
-            className="container flex flex-col items-center mt-6 md:mt-0"
-          >
-            <img
-              src={card.imageUrl}
-              alt={card.imageAlt}
-              className="object-scale-down h-48 w-full md:w-96"
-            />
-            <h1 className="mb-2 text-center text-xl md:text-3xl text-black">
-              {card.header}
-            </h1>
-            <div className="">
-              <p className="mb-2 text-md md:text-lg text-justify text-black">
-                {card.description}
-              </p>
-            </div>
-          </div>
+          <AnimatedCard key={uuidv4()} {...card} />
         ))}
       </div>
     </div>

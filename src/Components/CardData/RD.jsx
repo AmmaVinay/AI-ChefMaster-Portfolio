@@ -5,73 +5,94 @@ import i8 from "./i8.jpg";
 import i9 from "./i9.jpg";
 import i10 from "./i10.jpg";
 import i11 from "./i11.jpg";
-import Footer from "../Footer/Footer";
+import { Fade, Slide } from "react-reveal";
+import { v4 as uuidv4 } from "uuid";
+import "animate.css";
+const AnimatedCard = ({ imageUrl, imageAlt, heading, description, index }) => {
+  return (
+    <div
+      className={`flex flex-col md:flex-row ${index % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"} justify-center items-center w-full gap-8 md:gap-12 mx-auto my-12 px-4 sm:px-6 lg:px-8`}
+    >
+      <Fade right={index % 2 === 0} left={index % 2 !== 0}>
+        <img
+          src={imageUrl}
+          className="w-full h-64 md:h-96 md:w-1/2 rounded-lg shadow-lg"
+          alt={imageAlt}
+        />
+      </Fade>
+      <div className="flex flex-col justify-center gap-6 md:gap-12 md:pt-0 items-center max-w-md md:max-w-[400px]">
+        <Slide left={index % 2 === 0} right={index % 2 !== 0}>
+          <h3 className="text-xl sm:text-lg md:text-2xl lg:text-3xl font-bold text-center md:text-left">
+            {heading}
+          </h3>
+        </Slide>
+        <Slide left={index % 2 === 0} right={index % 2 !== 0}>
+          <p className="text-lg sm:text-lg md:text-xl text-center md:text-left">
+            {description}
+          </p>
+        </Slide>
+      </div>
+    </div>
+  );
+};
 
 const rdSections = [
   {
-    title: "INNOVATION HUB:",
-    content:
+    heading: "INNOVATION HUB:",
+    description:
       "Our R&D domain serves as the nucleus of innovation, where ideas are cultivated and transformed into advanced features that redefine the culinary tech landscape.",
-    image: i6,
+    imageUrl: i6,
   },
   {
-    title: "TECHNOLOGICAL ADVANCEMENTS:",
-    content:
+    heading: "TECHNOLOGICAL ADVANCEMENTS:",
+    description:
       "We constantly push technological boundaries, staying ahead of industry trends to provide our users with the latest and most advanced features in the realm of culinary exploration.",
-    image: i7,
+    imageUrl: i7,
   },
   {
-    title: "COMMITMENT TO EXCELLENCE:",
-    content:
+    heading: "COMMITMENT TO EXCELLENCE:",
+    description:
       "Our dedicated R&D team is committed to delivering unparalleled value, ensuring that our company remains at the forefront of the industry through continuous improvement and a commitment to excellence.",
-    image: i8,
+    imageUrl: i8,
   },
   {
-    title: "USER-CENTRIC APPROACH:",
-    content:
+    heading: "USER-CENTRIC APPROACH:",
+    description:
       "Through user insights and feedback, we shape the future of our platform, creating a seamless and user-friendly culinary experience that goes beyond expectations.",
-    image: i9,
+    imageUrl: i9,
   },
   {
-    title: "CREATIVE POWERHOUSE:",
-    content:
+    heading: "CREATIVE POWERHOUSE:",
+    description:
       "The R&D team is a dynamic force of creativity, ingenuity, and expertise, exploring uncharted territories to bring groundbreaking solutions to the culinary tech landscape.",
-    image: i10,
+    imageUrl: i10,
   },
   {
-    title: "DRIVING INDUSTRY TRENDS:",
-    content:
+    heading: "DRIVING INDUSTRY TRENDS:",
+    description:
       "We don't just keep up with industry trends; we set the pace. The R&D domain is where challenges are turned into opportunities, and where we shape the future of food and culinary experiences.",
-    image: i11,
+    imageUrl: i11,
   },
 ];
 
 const RD = () => {
   return (
     <>
-      <div className=" bg-cyan-300 h-full min-h-screen w-full">
-        <div className="flex justify-center items-center mb-12 h-28 bg-cyan-600">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white font-serif py-4 px-6 md:px-8 lg:px-10 xl:px-12 text-center md:text-left">
-            R&D (Research and Development)
-          </h1>
-        </div>
+      <div className="h-full min-h-screen w-full mb-12">
+      <div style={{ backgroundColor: 'rgba(0, 84, 79, 0.5)' }} className="flex mb-5 justify-center items-center h-28">
+          <h1 style={{textShadow: '2px 0.5px 0.5px rgba(0, 0, 0, 0.5)'}} className='bg-green-500 text-transparent bg-clip-text text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold font-serif py-4 px-6 md:px-8 lg:px-10 xl:px-12 text-center md:text-left'>
+          R&D (Research and Development)
+        </h1>
+      </div>
 
-        {rdSections.map((section, index) => (
-    <div key={index} className={`flex flex-col pb-5 box-border md:flex-row ${index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'} justify-center items-center w-full gap-8 md:gap-12 mx-auto   px-4 sm:px-6 lg:px-8`}>
-            <img
-              className="h-72 w-full md:w-1/3 border-2 border-black rounded-lg md:ml-12"
-              src={section.image}
-              alt={`Section ${index + 1}`}
-            />
-            <div className='md:w-1/2 md:ml-20 flex flex-col justify-center'>
-              <h1 className="text-3xl font-bold py-5 text-center md:text-left">{section.title}</h1>
-              <p className="text-xl mb-8 text-center md:text-left">{section.content}</p>
-            </div>
-          </div>
+      <div className="mt-6">
+        {rdSections.map((obj, index) => (
+          <AnimatedCard key={uuidv4()} index={index} {...obj} />
         ))}
+      </div>
 
       </div>
-     </>
+    </>
   );
 };
 
